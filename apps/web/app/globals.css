@@ -91,6 +91,7 @@ h4,
 h5,
 h6 {
   font-family: var(--font-display), system-ui, sans-serif;
+  @apply tracking-wide
 }
 
 
@@ -139,6 +140,43 @@ h6 {
 }
 
 /* Better default spacing rhythm */
-section {
+section,
+footer {
   @apply py-12 md:py-16;
 }
+
+/* =========================
+   DECORATIVE ANIMATIONS
+========================= */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-14px); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33%       { transform: translateY(-10px) rotate(3deg); }
+  66%       { transform: translateY(-6px) rotate(-2deg); }
+}
+
+@keyframes drift {
+  0%, 100% { transform: translateX(0px) translateY(0px); }
+  25%       { transform: translateX(8px) translateY(-8px); }
+  75%       { transform: translateX(-6px) translateY(-4px); }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50%       { transform: translateY(-8px) scale(1.04); }
+}
+
+.animate-float      { animation: float      4s ease-in-out infinite; }
+.animate-float-slow { animation: float-slow 6s ease-in-out infinite; }
+.animate-drift      { animation: drift      7s ease-in-out infinite; }
+.animate-spin-slow  { animation: spin-slow  12s linear infinite; }
+.animate-bob        { animation: bob        3.5s ease-in-out infinite; }

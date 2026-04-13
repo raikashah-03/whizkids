@@ -1,50 +1,130 @@
+@import "tailwindcss";
+
+/* =========================
+   THEME (FONTS)
+========================= */
+@theme {
+  --font-nunito: var(--font-nunito);
+  --font-dynapuff: var(--font-dynapuff);
+}
+
+/* =========================
+   ROOT DESIGN TOKENS
+========================= */
 :root {
-  --background: #ffffff;
+  /* Core UI */
+  --background: #f5f5f5;
   --foreground: #171717;
+
+  /* 🌈 Pastel Colors (Soft / Calm UI Sections) */
+  --skyblue-light: #E4F3F7;
+  --peach-light: #F4EEE5;
+  --lavender-light: #EBDFFF;
+  --pink-light: #FDE9E9;
+  --green-light: #F1F8EB;
+
+  /* 🌟 Bright Colors (CTA / Highlights) */
+  --skyblue-bright: #BEE7F0;
+  --peach-bright: #EADBC8;
+  --lavender-bright: #D6C2FF;
+  --pink-bright: #FFC9C9;
+  --green-bright: #D7F0C8;
+
+  /* Typography */
+  --font-primary: var(--font-nunito);
+  --font-display: var(--font-dynapuff);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* =========================
+   TAILWIND THEME MAPPING
+========================= */
+@theme inline {
+  /* Core */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  /* Pastel */
+  --color-skyblue: var(--skyblue-light);
+  --color-peach: var(--peach-light);
+  --color-lavender: var(--lavender-light);
+  --color-pink: var(--pink-light);
+  --color-green: var(--green-light);
+
+  /* Bright */
+  --color-skyblue-strong: var(--skyblue-bright);
+  --color-peach-strong: var(--peach-bright);
+  --color-lavender-strong: var(--lavender-bright);
+  --color-pink-strong: var(--pink-bright);
+  --color-green-strong: var(--green-bright);
+
+  /* Fonts */
+  --font-sans: var(--font-primary);
+  --font-display: var(--font-display);
 }
 
-html,
+/* =========================
+   GLOBAL TYPOGRAPHY
+========================= */
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
   background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-primary), Arial, Helvetica, sans-serif;
 }
 
+/* Headings = playful preschool feel */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display), system-ui, sans-serif;
+}
+
+@layer components {
+  h1 {
+    @apply text-foreground text-2xl md:text-4xl font-bold
+  }
+
+  h2 {
+    @apply text-foreground text-xl md:text-2xl font-bold
+  }
+
+  h3 {
+    @apply text-foreground text-lg md:text-xl font-bold
+  }
+
+  h4 {
+    @apply text-foreground text-base md:text-lg font-bold
+  }
+
+  h5 {
+    @apply text-foreground text-sm md:text-base font-bold
+  }
+
+  h6 {
+    @apply text-foreground text-xs md:text-sm font-bold
+  }
+
+  .section-heading {
+    @apply mb-4
+  }
+}
+
+.container {
+  @apply mx-auto max-w-7xl px-4 md:px-6
+}
+
+.page-section {
+  @apply py-12 md:py-18
+}
+
+/* Smooth UI feel (important for premium UX) */
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.imgDark {
-  display: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-
-  .imgLight {
-    display: none;
-  }
-  .imgDark {
-    display: unset;
-  }
+/* Better default spacing rhythm */
+section {
+  @apply py-12 md:py-16;
 }

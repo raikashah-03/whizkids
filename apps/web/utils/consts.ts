@@ -25,6 +25,10 @@ export const whatsappData = {
   link: "https://whatsapp.com"
 }
 
+// ─── Floating WhatsApp contact number ─────────────────────────────────────────
+// Replace with the actual WhatsApp number (include country code, no spaces/dashes)
+export const whatsappNumber = "+919876543210"
+
 export const addressData = {
   address: "12/2, 1st main, Nandi Durga Rd, Jayamahal, Bengaluru, Karnataka 560046",
   phone: "+91 9876543210",

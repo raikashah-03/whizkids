@@ -1,5 +1,6 @@
 import Footer from "@/components/footer";
 import Header from "@/components/header";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 import type { Metadata } from "next";
 import { DynaPuff, Nunito } from "next/font/google";
 import "./globals.css";
@@ -32,6 +33,8 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <Header />
         <main>{children}</main>
+        {/* Floating WhatsApp button — always visible, bottom-right corner */}
+        <WhatsAppFloat />
         <Footer />
       </body>
     </html>

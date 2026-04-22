@@ -56,7 +56,7 @@ const WhyChoose = () => {
       <div className="container relative z-10">
 
         {/* Top Split Content Segment */}
-        <div className="flex flex-col md:flex-row gap-12 lg:gap-20 mb-16 lg:mb-20">
+        <div className="flex flex-col md:flex-row gap-6 lg:gap-20 mb-5 lg:mb-20">
 
           {/* Left Side: Headings & Images */}
           <div className="mt-5 md:w-[40%] flex flex-col items-center text-center md:items-start md:text-left">
@@ -102,11 +102,11 @@ const WhyChoose = () => {
 
           {/* Right Side: Supporting Text */}
           <div className="space-y-3 md:space-y-6 mt-5 md:w-[60%] text-center md:text-left">
-            <p>
+            <p className="text-foreground/80 text-sm font-medium md:text-lg">
               We provide a nurturing environment where your child can explore,
               learn, and grow with confidence and joy every single day. Our dedicated educators bring years of experience and boundless passion to every classroom.
             </p>
-            <p>
+            <p className="text-foreground/80 text-sm font-medium md:text-lg">
               By blending structured curriculum with creative, unstructured play, we ensure emotional and academic development go hand-in-hand. Whether it is painting, storytime, or problem-solving games, every activity is designed to spark curiosity.
             </p>
 

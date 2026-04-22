@@ -1,4 +1,5 @@
 import Image, { StaticImageData } from "next/image";
+import { Fragment } from "react";
 
 const SPAN_COLORS = [
   "var(--skyblue-bright)",
@@ -47,18 +48,36 @@ export default function Heading({
         {headingText}{" "}
 
         <span aria-label={spanText} role="text">
-          {Array.from(spanText).map((char, index) => (
-            <span
-              key={index}
-              aria-hidden="true"
-              style={{
-                color: SPAN_COLORS[index % SPAN_COLORS.length],
-                display: "inline-block",
-              }}
-            >
-              {char}
-            </span>
-          ))}
+          {(() => {
+            let charCount = 0;
+            return spanText.split(" ").map((word, wordIndex, array) => {
+              const wordElements = (
+                <span key={`word-${wordIndex}`} className="inline-block">
+                  {Array.from(word).map((char, charIdx) => {
+                    const currentColorIndex =
+                      (charCount + charIdx) % SPAN_COLORS.length;
+                    return (
+                      <span
+                        key={charIdx}
+                        aria-hidden="true"
+                        style={{ color: SPAN_COLORS[currentColorIndex] }}
+                      >
+                        {char}
+                      </span>
+                    );
+                  })}
+                </span>
+              );
+              charCount += word.length + 1;
+
+              return (
+                <Fragment key={`frag-${wordIndex}`}>
+                  {wordElements}
+                  {wordIndex < array.length - 1 && " "}
+                </Fragment>
+              );
+            });
+          })()}
         </span>
       </h2>
 

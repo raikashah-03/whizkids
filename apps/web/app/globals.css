@@ -141,6 +141,14 @@ footer {
   @apply py-12 md:py-16;
 }
 
+.extra-top-padding {
+  @apply pt-14 md:pt-24;
+}
+
+.extra-bottom-padding {
+  @apply pb-14 md:pb-24;
+}
+
 .main-top-section {
   @apply pt-[90px] md:pt-[130px]
 }
@@ -246,14 +254,32 @@ footer {
 ========================= */
 
 @keyframes wa-pulse {
-  0% { transform: scale(1); opacity: 0.6; }
-  70% { transform: scale(1.9); opacity: 0; }
-  100% { transform: scale(1.9); opacity: 0; }
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+
+  70% {
+    transform: scale(1.9);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1.9);
+    opacity: 0;
+  }
 }
 
 @keyframes wa-float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-8px); }
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
 }
 
 .animate-wa-float {

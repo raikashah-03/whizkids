@@ -14,20 +14,22 @@ interface HeadingProps {
   spanText: string;
   frontImage?: string | StaticImageData;
   backImage?: string | StaticImageData;
+  beforeIcon?: string | StaticImageData;
+  afterIcon?: string | StaticImageData;
   className?: string;
 }
-
 
 export default function Heading({
   headingText,
   spanText,
   frontImage,
   backImage,
+  beforeIcon,
+  afterIcon,
   className = "",
 }: HeadingProps) {
   return (
-    <div className={`relative inline-flex items-center justify-center ${className}`}>
-
+    <div className={`relative inline-flex items-center justify-center gap-3 md:gap-4 ${className}`}>
       {backImage && (
         <span
           aria-hidden="true"
@@ -39,6 +41,18 @@ export default function Heading({
             width={80}
             height={80}
             className="object-contain"
+          />
+        </span>
+      )}
+
+      {beforeIcon && (
+        <span aria-hidden="true" className="shrink-0 animate-bob">
+          <Image
+            src={beforeIcon}
+            alt=""
+            width={48}
+            height={48}
+            className="w-10 h-10 md:w-14 md:h-14 object-contain"
           />
         </span>
       )}
@@ -81,6 +95,17 @@ export default function Heading({
         </span>
       </h2>
 
+      {afterIcon && (
+        <span aria-hidden="true" className="shrink-0 animate-bob" style={{ animationDelay: '1s' }}>
+          <Image
+            src={afterIcon}
+            alt=""
+            width={48}
+            height={48}
+            className="w-10 h-10 md:w-14 md:h-14 object-contain"
+          />
+        </span>
+      )}
 
       {frontImage && (
         <span

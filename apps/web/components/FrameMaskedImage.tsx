@@ -8,6 +8,7 @@ type Props = {
   bgImage: string;
   maskImage: string;
   className?: string;
+  scaleBgDown?: boolean;
 };
 
 const FramedMaskedImage: React.FC<Props> = ({
@@ -15,6 +16,7 @@ const FramedMaskedImage: React.FC<Props> = ({
   bgImage,
   maskImage,
   className = '',
+  scaleBgDown = false,
 }) => {
   console.log(frameImage)
   return (
@@ -47,7 +49,7 @@ const FramedMaskedImage: React.FC<Props> = ({
         alt="frame"
         width={400}
         height={400}
-        className="relative z-10 w-full h-full object-contain pointer-events-none"
+        className={`relative z-10 w-full h-full object-contain pointer-events-none ${scaleBgDown ? 'scale-[1.05]' : ''}`}
       />
     </div>
   );

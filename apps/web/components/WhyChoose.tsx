@@ -64,6 +64,7 @@ const WhyChoose = () => {
               headingText="Why Choose"
               spanText="Whizkids?"
               className="justify-center md:justify-start mb-4"
+              afterIcon="/icons/bee.png"
             />
 
             <p className="text-foreground/80 text-xl font-medium mb-10">

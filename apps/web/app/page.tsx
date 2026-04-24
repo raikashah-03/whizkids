@@ -24,7 +24,7 @@ export default function Home() {
           <Image src="/icons/parasuit.png" alt="" fill className="object-contain" />
         </div>
         <div className="absolute bottom-20 right-4 md:right-16 w-12 h-12 md:w-20 md:h-20 pointer-events-none animate-bob z-20" style={{ animationDelay: '2s' }}>
-          <Image src="/icons/pencil.png" alt="" fill className="object-contain" />
+          <Image src="/icons/alphabets.png" alt="" fill className="object-contain" />
         </div>
 
         <ProgramPage />

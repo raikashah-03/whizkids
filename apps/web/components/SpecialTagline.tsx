@@ -34,7 +34,7 @@ const SpecialTagline = () => {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top 55%",
-          end: "top 20%",
+          end: "top 10%",
           scrub: true,
         },
       });

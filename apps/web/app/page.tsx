@@ -1,16 +1,17 @@
-import Image from "next/image";
 import BuildingFoundation from "@/components/BuildingFoundation";
 import FAQPage from "@/components/FAQPage";
 import ProgramPage from "@/components/ProgramPage";
+import SpecialTagline from "@/components/SpecialTagline";
 import WhyChoose from "@/components/WhyChoose";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <div>
       <div className="h-screen"></div>
+      <SpecialTagline />
       <WhyChoose />
       <BuildingFoundation />
-      
       <div className="relative">
         {/* Floating Icons for Program & FAQ pages */}
         <div className="absolute top-20 left-4 md:left-12 w-16 h-16 md:w-24 md:h-24 pointer-events-none animate-float z-20">
@@ -29,7 +30,7 @@ export default function Home() {
         <ProgramPage />
         <FAQPage />
       </div>
-      
+
       <div className="h-screen"></div>
     </div>
   );

@@ -165,7 +165,7 @@ export default function BreadCrumb({
         </span>
 
         {/* ── Page layout ── */}
-        <div className="container relative z-10 flex flex-col items-center gap-8 md:flex-row md:justify-between">
+        <div className="container relative z-10 flex flex-col items-center gap-8 md:flex-row md:justify-between pt-[50px]">
 
           {/* ── Left: breadcrumb + heading + description ── */}
           <div className="flex flex-col gap-4 w-full md:max-w-[60%]">

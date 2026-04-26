@@ -1,10 +1,11 @@
+import React from "react";
 import BreadCrumb from "@/components/BreadCrumb"
 import ContactForm from "@/components/ContactForm"
 import ContactInfo from "@/components/ContactInfo"
 import MapEmbadding from "@/components/MapEmbadding"
 
 
-const contactPage = () => {
+const contactPage = (): React.JSX.Element => {
   return (
     <div>
       <BreadCrumb heading={{

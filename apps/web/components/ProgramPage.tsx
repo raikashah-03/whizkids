@@ -126,7 +126,7 @@ function ProgramCard({ program }: { program: Program }) {
 }
 
 // ── Main Section ───────────────────────────────────────────────
-const ProgramPage = () => {
+const ProgramPage = (): React.JSX.Element => {
   return (
     <section className="bg-skyblue relative overflow-hidden py-12 md:py-20">
 

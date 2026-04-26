@@ -1,3 +1,4 @@
+import React from "react";
 import BreadCrumb from "@/components/BreadCrumb"
 import GallerySection from "@/components/GallerySection"
 import type { Metadata } from "next"
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
     "Explore our photo gallery to see moments from classrooms, outdoor adventures, creative activities, and exciting events at WhizKids.",
 }
 
-const galleryPage = () => {
+const galleryPage = (): React.JSX.Element => {
   return (
     <div>
       <BreadCrumb

@@ -2,6 +2,7 @@
 import { Brain, GraduationCap, Heart, ShieldCheck } from "lucide-react";
 import Image from "next/image";
 import Heading from "./Headding";
+import TopBottomShapeSection from "./ui/top-bottom-shape-section";
 
 const features = [
   {
@@ -42,17 +43,10 @@ const features = [
   }
 ];
 
-const WhyChoose = () => {
+const WhyChoose = (): React.JSX.Element => {
+
   return (
-    <section className="bg-peach w-full relative overflow-hidden extra-top-padding extra-bottom-padding">
-      {/* Decorative Background Elements */}
-      {/* <div className="absolute top-20 left-10 w-32 h-32 bg-pink-light rounded-full mix-blend-multiply filter blur-2xl opacity-60 animate-float hidden md:block"></div>
-      <div className="absolute bottom-20 right-10 w-40 h-40 bg-skyblue-light rounded-full mix-blend-multiply filter blur-2xl opacity-60 animate-float-slow hidden md:block"></div> */}
-
-      <div className="absolute bg-background top-0 right-0 z-0">
-        <Image src="/shapes/top-shape-1.svg" alt="Top Shape" width={1920} height={137} className="w-full h-full object-cover" />
-      </div>
-
+    <TopBottomShapeSection>
       <div className="container relative z-10">
 
         {/* Top Split Content Segment */}
@@ -138,11 +132,7 @@ const WhyChoose = () => {
         </div>
 
       </div>
-
-      <div className="absolute bg-background bottom-0 right-0 z-0 pointer-events-none">
-        <Image src="/shapes/bottom-shape-1.svg" alt="Bottom Shape" width={1920} height={107} className="w-full h-full object-cover" />
-      </div>
-    </section>
+    </TopBottomShapeSection>
   );
 };
 

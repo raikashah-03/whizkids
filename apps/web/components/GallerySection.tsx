@@ -122,7 +122,7 @@ function GalleryCard({ item, index, spanTwo, onClick }: CardProps) {
 
 // ─── Main Section ─────────────────────────────────────────────────────────────
 
-export default function GallerySection() {
+export default function GallerySection(): React.JSX.Element {
   const [activeTab, setActiveTab] = useState<Tab>("All");
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [loadingMore, setLoadingMore] = useState(false);

@@ -2,10 +2,12 @@ import BuildingFoundation from "@/components/BuildingFoundation";
 import FAQPage from "@/components/FAQPage";
 import ProgramPage from "@/components/ProgramPage";
 import SpecialTagline from "@/components/SpecialTagline";
+import TestimonialSection from "@/components/TestimonialSection";
 import WhyChoose from "@/components/WhyChoose";
 import Image from "next/image";
+import React from "react";
 
-export default function Home() {
+export default function Home(): React.JSX.Element {
   return (
     <div>
       <div className="h-screen"></div>
@@ -28,6 +30,7 @@ export default function Home() {
         </div>
 
         <ProgramPage />
+        <TestimonialSection />
         <FAQPage />
       </div>
 

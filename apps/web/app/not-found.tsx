@@ -1,6 +1,7 @@
+import React from "react";
 import Link from "next/link";
 
-export default function NotFoundPage() {
+export default function NotFoundPage(): React.JSX.Element {
   return (
     <div className="h-screen overflow-hidden flex items-center justify-center px-4 relative ">
       <div className="max-w-md w-full text-center">

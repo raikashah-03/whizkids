@@ -1,5 +1,6 @@
+import React from "react";
 
-const aboutPage = () => {
+const aboutPage = (): React.JSX.Element => {
   return (
     <div>page</div>
   )

@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone } from 'lucide-react';
+import { LucideIcon, Mail, MapPin, Phone } from 'lucide-react';
 
 import facebook from '@/public/icons/facebook.png';
 import instagram from '@/public/icons/instagram.png';
@@ -29,7 +29,18 @@ export const whatsappData = {
 // Replace with the actual WhatsApp number (include country code, no spaces/dashes)
 export const whatsappNumber = "+919876543210"
 
-export const addressData = {
+interface AddressData {
+  address: string;
+  phone: string;
+  email: string;
+  icons: {
+    address: LucideIcon;
+    phone: LucideIcon;
+    email: LucideIcon;
+  };
+}
+
+export const addressData: AddressData = {
   address: "12/2, 1st main, Nandi Durga Rd, Jayamahal, Bengaluru, Karnataka 560046",
   phone: "+91 9876543210",
   email: "info@jayamahal.com",
@@ -39,6 +50,27 @@ export const addressData = {
     email: Mail
   }
 }
+
+
+
+export const LightBrightColors = [{
+  lightColor: "#E4F3F7",
+  darkColor: "#29BFDF"
+},
+{
+  lightColor: "#F4EEE5",
+  darkColor: "#FF8C4B"
+}, {
+  lightColor: "#EBDFFF",
+  darkColor: "#9333EA",
+},
+{
+  lightColor: "#FDE9E9",
+  darkColor: "#FF4D8D"
+}, {
+  lightColor: "#F1F8EB",
+  darkColor: "#3DD67A"
+}]
 
 export const iframeMaplink = "https://maps.google.com/"
 

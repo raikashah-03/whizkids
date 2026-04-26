@@ -1,3 +1,4 @@
+import React from "react";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
@@ -24,7 +25,7 @@ export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>): React.JSX.Element {
   return (
     <html
       lang="en"

@@ -10,10 +10,10 @@ import Image from "next/image";
 
 // Register GSAP plugins
 if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger, useGSAP);
+  gsap.registerPlugin(ScrollTrigger);
 }
 
-const SpecialTagline = () => {
+const SpecialTagline = (): React.JSX.Element => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLHeadingElement>(null);
   const bgShapeRef = useRef<HTMLDivElement>(null);
@@ -28,16 +28,18 @@ const SpecialTagline = () => {
       });
 
       // Animate characters
-      gsap.from(splitText.chars, {
-        opacity: 0.1,
-        stagger: 0.1,
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 55%",
-          end: "top 10%",
-          scrub: true,
-        },
-      });
+      if (splitText.chars) {
+        gsap.from(splitText.chars, {
+          opacity: 0.1,
+          stagger: 0.1,
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 55%",
+            end: "top 10%",
+            scrub: true,
+          },
+        });
+      }
 
       // Background Shape Animation: Scaling up and moving to top
       if (bgShapeRef.current) {

@@ -18,7 +18,6 @@ const FramedMaskedImage: React.FC<Props> = ({
   className = '',
   scaleBgDown = false,
 }) => {
-  console.log(frameImage)
   return (
     <div className={`relative ${className}`}>
 

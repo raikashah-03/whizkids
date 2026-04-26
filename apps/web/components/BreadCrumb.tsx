@@ -38,7 +38,7 @@ export default function BreadCrumb({
   description,
   mainImage,
   className,
-}: BreadCrumbProps) {
+}: BreadCrumbProps): React.JSX.Element {
   const pathname = usePathname();
 
   // Build breadcrumb segments from the URL path

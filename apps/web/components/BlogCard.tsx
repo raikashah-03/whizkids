@@ -22,7 +22,7 @@ const BlogCard = ({ blog, colorScheme }: BlogCardProps): React.JSX.Element => {
   });
 
   return (
-    <Link href={`/blog/${blog.slug.current}`} className="group block h-full">
+    <Link href={`/blogs/${blog.slug.current}`} className="group block h-full">
       <div
         className="rounded-[3rem] h-full transition-all duration-500  hover:-translate-y-2 flex flex-col"
       >

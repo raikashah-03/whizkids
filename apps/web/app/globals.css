@@ -135,6 +135,15 @@ h6 {
   @apply mx-auto max-w-7xl px-4 md:px-6
 }
 
+.mid-text {
+  @apply text-sm md:text-xl font-medium
+}
+
+.mid-text-1 {
+  @apply text-sm md:text-lg
+}
+
+
 /* Better default spacing rhythm */
 section,
 footer {

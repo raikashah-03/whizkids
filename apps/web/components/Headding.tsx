@@ -27,7 +27,7 @@ export default function Heading({
   beforeIcon,
   afterIcon,
   className = "",
-}: HeadingProps) {
+}: HeadingProps): React.JSX.Element {
   return (
     <div className={`relative inline-flex items-center justify-center gap-3 md:gap-4 ${className}`}>
       {backImage && (
@@ -46,13 +46,13 @@ export default function Heading({
       )}
 
       {beforeIcon && (
-        <span aria-hidden="true" className="shrink-0 animate-bob">
+        <span aria-hidden="true" className="shrink-0">
           <Image
             src={beforeIcon}
             alt=""
             width={48}
             height={48}
-            className="w-10 h-10 md:w-14 md:h-14 object-contain"
+            className="w-10 h-10 object-contain"
           />
         </span>
       )}
@@ -96,13 +96,13 @@ export default function Heading({
       </h2>
 
       {afterIcon && (
-        <span aria-hidden="true" className="shrink-0 animate-bob" style={{ animationDelay: '1s' }}>
+        <span aria-hidden="true" className="shrink-0" style={{ animationDelay: '1s' }}>
           <Image
             src={afterIcon}
             alt=""
             width={48}
             height={48}
-            className="w-10 h-10 md:w-14 md:h-14 object-contain"
+            className="w-10 h-10 object-contain"
           />
         </span>
       )}

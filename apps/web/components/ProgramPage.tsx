@@ -97,7 +97,7 @@ function ProgramCard({ program }: { program: Program }) {
   return (
     <Link
       href={`/programs#${program.slug}`}
-      className="group focus:outline-none w-full block max-w-[300px]"
+      className="group focus:outline-none w-full block max-w-[320px]"
     >
       {/* Card: image + label overlaid at bottom */}
       <div className="relative w-full transition-transform duration-300 group-hover:-translate-y-2">
@@ -162,17 +162,16 @@ const ProgramPage = (): React.JSX.Element => {
             headingText="Explore Our"
             spanText="Programs"
             className="justify-center!"
-            afterIcon="/icons/parasuit.png"
+            beforeIcon='/shapes/left-heading-symbol.svg'
+            afterIcon="/shapes/right-heading-symbol.svg"
           />
-          <p className="max-w-xl text-muted-foreground text-sm sm:text-base leading-relaxed">
-            From the first curious steps to confident little learners — our
-            thoughtfully crafted programs nurture every stage of your child&apos;s
-            early childhood journey through play, creativity, and exploration.
+          <p className="max-w-2xl text-muted-foreground mid-text-1 leading-relaxed">
+            From the first curious steps to confident little learners — our thoughtfully crafted programs nurture every stage of your child&apos;s early childhood journey through play, creativity, and exploration.
           </p>
         </div>
 
         {/* ── Program Cards ── */}
-        <div className="flex flex-wrap justify-center gap-y-10 gap-x-4 sm:gap-x-6 md:gap-x-8">
+        <div className="flex flex-wrap justify-center gap-y-5 gap-x-4 sm:gap-x-6 md:gap-x-8">
           {programs.map((program) => (
             <ProgramCard key={program.slug} program={program} />
           ))}

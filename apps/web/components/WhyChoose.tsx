@@ -97,14 +97,13 @@ const WhyChoose = (): React.JSX.Element => {
 
           {/* Right Side: Supporting Text */}
           <div className="space-y-3 md:space-y-6 mt-5 md:w-[60%] text-center md:text-left">
-            <p className="text-foreground/80 text-sm font-medium md:text-lg">
+            <p className="mid-text">
               We provide a nurturing environment where your child can explore,
               learn, and grow with confidence and joy every single day. Our dedicated educators bring years of experience and boundless passion to every classroom.
             </p>
-            <p className="text-foreground/80 text-sm font-medium md:text-lg">
+            <p className="mid-text">
               By blending structured curriculum with creative, unstructured play, we ensure emotional and academic development go hand-in-hand. Whether it is painting, storytime, or problem-solving games, every activity is designed to spark curiosity.
             </p>
-
           </div>
 
         </div>
@@ -124,7 +123,7 @@ const WhyChoose = (): React.JSX.Element => {
               <h4 className="text-lg font-bold mb-2 text-foreground">
                 {feature.title}
               </h4>
-              <p className="text-foreground/70 leading-relaxed text-sm">
+              <p className="text-foreground/70 leading-relaxed mid-text-1">
                 {feature.description}
               </p>
             </div>

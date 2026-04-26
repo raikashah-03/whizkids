@@ -59,9 +59,9 @@ const TestimonialCarousel = ({ testimonials }: Props): React.JSX.Element => {
 
   return (
     <div className="relative max-w-4xl mx-auto px-4 sm:px-8 py-8">
-      {/* Container for the carousel with fixed height and overflow protection */}
-      <div className="relative rounded-[3rem] min-h-[400px]">
-        <AnimatePresence initial={false} custom={direction}>
+      {/* Container for the carousel with overflow protection */}
+      <div className="relative rounded-[3rem]">
+        <AnimatePresence initial={false} custom={direction} mode="popLayout">
           <motion.div
             key={currentIndex}
             custom={direction}
@@ -75,7 +75,7 @@ const TestimonialCarousel = ({ testimonials }: Props): React.JSX.Element => {
               scale: { duration: 0.4 },
               rotate: { duration: 0.4 }
             }}
-            className="w-full h-full absolute top-0 left-0"
+            className="w-full h-full"
           >
             <TestimonialCard
               testimonial={displayTestimonials[currentIndex]!}

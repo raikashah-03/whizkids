@@ -1,5 +1,6 @@
 import FAQAccordion from "./FAQAccordion";
 import Heading from "./Headding";
+import TopBottomShapeSection2 from "./ui/top-bottom-shape-section-2";
 
 const faqs = [
   {
@@ -29,39 +30,40 @@ const faqs = [
   },
 ];
 
-const FAQPage = () => {
+const FAQPage = (): React.JSX.Element => {
   return (
-    <section className="relative overflow-hidden">
-      {/* Decorative background elements */}
-      <div
-        className="absolute top-20 left-0 w-32 h-32 bg-peach-strong opacity-10 rounded-full blur-3xl pointer-events-none"
-        aria-hidden="true"
-      />
-      <div
-        className="absolute bottom-20 right-0 w-40 h-40 bg-skyblue-strong opacity-10 rounded-full blur-3xl pointer-events-none"
-        aria-hidden="true"
-      />
+    <TopBottomShapeSection2>
+      <section className="relative overflow-hidden">
+        {/* Decorative background elements */}
+        <div
+          className="absolute top-20 left-0 w-32 h-32 bg-peach-strong opacity-10 rounded-full blur-3xl pointer-events-none"
+          aria-hidden="true"
+        />
+        <div
+          className="absolute bottom-20 right-0 w-40 h-40 bg-skyblue-strong opacity-10 rounded-full blur-3xl pointer-events-none"
+          aria-hidden="true"
+        />
 
-      <div className="container relative z-10 max-w-4xl!">
-        {/* ── Centered Heading ── */}
-        <div className="flex flex-col items-center text-center gap-4 mb-12 md:mb-16">
-          <Heading
-            headingText="Frequently Asked"
-            spanText="Questions"
-            className="justify-center!"
-            afterIcon="/icons/pencil.png"
-          />
-          <p className="max-w-2xl text-muted-foreground text-sm sm:text-base leading-relaxed">
-            Find answers to common questions about our curriculum, facilities,
-            and admission process. We&apos;re here to help you make the best choice
-            for your child.
-          </p>
+        <div className="container relative z-10 max-w-4xl!">
+          {/* ── Centered Heading ── */}
+          <div className="flex flex-col items-center text-center gap-4 mb-12 md:mb-16">
+            <Heading
+              headingText="Frequently Asked"
+              spanText="Questions"
+              className="justify-center!"
+              beforeIcon="/icons/pencil.png"
+              afterIcon="/icons/pencil.png"
+            />
+            <p className="max-w-2xl text-muted-foreground mid-text-1 leading-relaxed">
+              Find answers to common questions about our curriculum, facilities, and admission process. We&apos;re here to help you make the best choice for your child.
+            </p>
+          </div>
+
+          {/* ── FAQ Accordion ── */}
+          <FAQAccordion faqs={faqs} />
         </div>
-
-        {/* ── FAQ Accordion ── */}
-        <FAQAccordion faqs={faqs} />
-      </div>
-    </section>
+      </section>
+    </TopBottomShapeSection2>
   );
 };
 

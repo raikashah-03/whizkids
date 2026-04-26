@@ -1,15 +1,15 @@
 "use client";
 
-import React, { useState } from "react";
-import { Plus, Minus } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import { Minus, Plus } from "lucide-react";
+import { useState } from "react";
 
 interface FAQItem {
   question: string;
   answer: string;
 }
 
-export default function FAQAccordion({ faqs }: { faqs: FAQItem[] }) {
+export default function FAQAccordion({ faqs }: { faqs: FAQItem[] }): React.JSX.Element {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const toggleFAQ = (index: number) => {
@@ -25,36 +25,33 @@ export default function FAQAccordion({ faqs }: { faqs: FAQItem[] }) {
             key={index}
             initial={false}
             animate={{
-              borderColor: isOpen ? "var(--primary)" : "var(--gray-border, #f3f4f6)",
+              borderColor: isOpen ? "var(--primary-color)" : "var(--gray-border, #f3f4f6)",
               boxShadow: isOpen
                 ? "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)"
                 : "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
             }}
             transition={{ duration: 0.3 }}
-            className={`border-2 rounded-2xl overflow-hidden bg-white ${
-              !isOpen ? "hover:border-gray-200 hover:shadow-md transition-shadow" : ""
-            }`}
+            className={`border-2 rounded-2xl overflow-hidden bg-white ${!isOpen ? "hover:border-gray-200 hover:shadow-md transition-shadow" : ""
+              }`}
           >
             <button
-              className="w-full group flex items-center justify-between px-5 py-4 md:px-6 md:py-4 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+              className="w-full group flex items-center justify-between px-5 py-4 md:px-6 md:py-4 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 focus-visible:ring-offset-2"
               onClick={() => toggleFAQ(index)}
               aria-expanded={isOpen}
             >
               <span
-                className={`font-bold text-base md:text-lg pr-4 transition-colors duration-300 ${
-                  isOpen ? "text-primary" : "text-foreground"
-                }`}
+                className={`font-bold text-base md:text-lg pr-4 transition-colors duration-300 ${isOpen ? "text-primary" : "text-foreground"
+                  }`}
               >
                 {faq.question}
               </span>
 
               {/* Icon Container */}
               <div
-                className={`shrink-0 w-6 h-6 md:w-8 md:h-8 rounded-full flex items-center justify-center transition-all duration-500 ease-in-out transform ${
-                  isOpen
-                    ? "bg-primary text-white rotate-180"
-                    : "bg-gray-50 text-gray-400 border border-gray-200 group-hover:border-primary group-hover:text-primary rotate-0"
-                }`}
+                className={`shrink-0 w-6 h-6 md:w-8 md:h-8 rounded-full flex items-center justify-center transition-all duration-500 ease-in-out transform ${isOpen
+                  ? "bg-primary text-white rotate-180"
+                  : "bg-gray-50 text-gray-400 border border-gray-200 group-hover:border-primary group-hover:text-primary rotate-0"
+                  }`}
               >
                 {isOpen ? (
                   <Minus className="w-3 h-3 md:w-4 md:h-4" />

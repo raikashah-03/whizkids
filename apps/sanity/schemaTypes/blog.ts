@@ -24,6 +24,39 @@ export const blogType = defineType({
       type: 'number',
     }),
     defineField({
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      options: {
+        source: 'title',
+        maxLength: 96,
+      },
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'category',
+      title: 'Category',
+      type: 'string',
+      initialValue: 'Hello Kids',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'blogsCardImage',
+      title: 'Blog Card Image',
+      description: 'Image optimized specifically for the blog card view on the home page.',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+      fields: [
+        {
+          name: 'alt',
+          type: 'string',
+          title: 'Alternative text',
+        },
+      ],
+    }),
+    defineField({
       name: 'mainImage',
       title: 'Main Image',
       type: 'image',

@@ -14,11 +14,10 @@ export interface Testimonial {
 }
 
 const TestimonialSection = async (): Promise<React.JSX.Element> => {
-  // Fetch top 10 most recent testimonials
   const testimonials: Testimonial[] = await client.fetch(
     `*[_type == "testimonial"] | order(_createdAt desc)[0...10]`,
     {},
-    { next: { revalidate: 60 } } // Revalidate every minute
+    { next: { revalidate: 60 } }
   );
 
   return (
@@ -29,8 +28,11 @@ const TestimonialSection = async (): Promise<React.JSX.Element> => {
           <Heading
             headingText="What Parents Say"
             spanText="About us"
+            className="justify-center!"
+            beforeIcon='/shapes/left-heading-symbol.svg'
+            afterIcon="/shapes/right-heading-symbol.svg"
           />
-          <p className="mt-4 text-gray-600 text-lg">
+          <p className="mt-4 mid-text-1">
             Join the Whizkids family where every child&apos;s journey is celebrated.
             Hear from our wonderful parents who have seen their children bloom with us.
           </p>

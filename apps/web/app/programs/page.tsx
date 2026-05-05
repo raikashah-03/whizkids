@@ -13,6 +13,7 @@ import SummerCampSection from "@/components/programs/SummerCampSection";
 import { Metadata } from "next";
 
 // Asset imports (used by ProgramCardSection)
+import CtaSection from "@/components/CtaSection";
 import FAQPage from "@/components/FAQPage";
 import jrKgImg from "@/public/images/programs/jr-kg.jpg";
 import nurseryImg from "@/public/images/programs/nursery.jpg";
@@ -145,6 +146,7 @@ export default function ProgramsPage(): React.JSX.Element {
       <SummerCampSection />
 
       <FAQPage />
+      <CtaSection />
     </main>
   );
 }

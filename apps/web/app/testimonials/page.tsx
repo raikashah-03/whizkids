@@ -1,4 +1,5 @@
 import BreadCrumb from "@/components/BreadCrumb";
+import CtaSection from "@/components/CtaSection";
 import TestimonialGrid from "@/components/TestimonialGrid";
 import { Testimonial } from "@/components/TestimonialSection";
 import { client } from "@/lib/sanity";
@@ -49,6 +50,8 @@ const TestimonialsPage = async (): Promise<React.JSX.Element> => {
           totalCount={totalCount}
         />
       </section>
+
+      <CtaSection />
     </main>
   );
 };

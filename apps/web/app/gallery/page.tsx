@@ -1,5 +1,6 @@
 import React from "react";
 import BreadCrumb from "@/components/BreadCrumb"
+import CtaSection from "@/components/CtaSection"
 import GallerySection from "@/components/GallerySection"
 import type { Metadata } from "next"
 
@@ -28,6 +29,7 @@ const galleryPage = (): React.JSX.Element => {
       />
 
       <GallerySection />
+      <CtaSection />
     </div>
   )
 }

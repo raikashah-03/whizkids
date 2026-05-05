@@ -2,6 +2,8 @@ import React from "react";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+import { InquiryModalProvider } from "@/components/InquiryModalContext";
+import InquiryModalRoot from "@/components/InquiryModalRoot";
 import type { Metadata } from "next";
 import { DynaPuff, Nunito } from "next/font/google";
 import "./globals.css";
@@ -22,7 +24,7 @@ export const metadata: Metadata = {
     template: "%s | Whizkids Learning Center",
   },
   description: "Whizkids provides a playful and enriching environment for early childhood education, focusing on playgroup, nursery, and kindergarten programs.",
-  metadataBase: new URL("https://whizkids.edu.in"), 
+  metadataBase: new URL("https://whizkids.edu.in"),
 };
 
 export default function RootLayout({
@@ -36,11 +38,15 @@ export default function RootLayout({
       className={`${nunito.variable} ${dynaPuff.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <Header />
-        <main>{children}</main>
-        {/* Floating WhatsApp button — always visible, bottom-right corner */}
-        <WhatsAppFloat />
-        <Footer />
+        <InquiryModalProvider>
+          <Header />
+          <main>{children}</main>
+          {/* Global inquiry modal — opened via useInquiryModal() from anywhere */}
+          <InquiryModalRoot />
+          {/* Floating WhatsApp button — always visible, bottom-right corner */}
+          <WhatsAppFloat />
+          <Footer />
+        </InquiryModalProvider>
       </body>
     </html>
   );

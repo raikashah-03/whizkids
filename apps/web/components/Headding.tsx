@@ -12,6 +12,7 @@ const SPAN_COLORS = [
 interface HeadingProps {
   headingText: string;
   spanText: string;
+  afterHeadingText?: string;
   frontImage?: string | StaticImageData;
   backImage?: string | StaticImageData;
   beforeIcon?: string | StaticImageData;
@@ -22,6 +23,7 @@ interface HeadingProps {
 export default function Heading({
   headingText,
   spanText,
+  afterHeadingText,
   frontImage,
   backImage,
   beforeIcon,
@@ -93,6 +95,10 @@ export default function Heading({
             });
           })()}
         </span>
+
+        {" "}{afterHeadingText && (
+          afterHeadingText
+        )}
       </h2>
 
       {afterIcon && (

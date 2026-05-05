@@ -76,16 +76,20 @@ export function Header() {
 
         {/* Right CTA / Action Buttons */}
         <div className="hidden lg:flex items-center gap-4">
-          <Button variant="default" className="cursor-pointer rounded-full px-6 font-bold text-base h-11 bg-primary text-white">
-            Book a Visit <ChevronRight className="ml-1 size-4" />
-          </Button>
+          <Link href="/contact" passHref>
+            <Button variant="default" className="cursor-pointer rounded-full px-6 font-bold text-base h-11 bg-primary text-white">
+              Book a Visit <ChevronRight className="ml-1 size-4" />
+            </Button>
+          </Link>
         </div>
 
         {/* Mobile Navigation */}
         <div className="flex lg:hidden items-center gap-2">
-          <Button variant="default" className="cursor-pointer rounded-full px-6 font-bold text-base h-11 bg-primary text-white">
-            Book a Visit <ChevronRight className="ml-1 size-4" />
-          </Button>
+          <Link href="/contact" passHref>
+            <Button variant="default" className="cursor-pointer rounded-full px-6 font-bold text-base h-11 bg-primary text-white">
+              Book a Visit <ChevronRight className="ml-1 size-4" />
+            </Button>
+          </Link>
           <Button variant="ghost" size="icon" className="lg:hidden" onClick={() => setIsOpen(true)}>
             <Menu className="h-10 w-10" />
             <span className="sr-only">Toggle Menu</span>

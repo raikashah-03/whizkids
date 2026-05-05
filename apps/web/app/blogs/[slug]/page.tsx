@@ -165,7 +165,7 @@ export default async function BlogDetailsPage({ params }: Props): Promise<React.
 
               {/* Explore More Button */}
               <Link
-                href="/blog"
+                href="/blogs"
                 className="mt-4 flex items-center justify-center py-4 rounded-2xl bg-gray-50 text-xs font-black text-gray-600 transition-all hover:bg-primary hover:text-white"
               >
                 View All Highlights

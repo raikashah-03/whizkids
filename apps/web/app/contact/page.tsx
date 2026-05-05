@@ -5,6 +5,23 @@ import ContactInfo from "@/components/ContactInfo"
 import MapEmbadding from "@/components/MapEmbadding"
 
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Get in Touch | Contact Whizkids Learning Center",
+  description: "We’d love to hear from you! Whether you have questions, want to schedule a visit, or are ready to enroll your child, our team at Whizkids is here to help.",
+  keywords: ["contact Whizkids", "preschool inquiry", "visit Whizkids", "school admission contact", "Whizkids location", "contact preschool", "enrollment inquiry"],
+  openGraph: {
+    title: "Connect with Whizkids | We're Here to Help",
+    description: "Have questions about our programs or admissions? Reach out to Whizkids today. We are happy to assist you with any inquiries regarding our curriculum, facilities, or enrollment process.",
+    images: ["/images/contact-banner.jpg"],
+    type: "website",
+  },
+  alternates: {
+    canonical: "/contact",
+  },
+};
+
 const contactPage = (): React.JSX.Element => {
   return (
     <div>

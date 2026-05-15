@@ -23,5 +23,14 @@ export const NAVIGATION_LINKS = [
   },
   { title: 'Curriculum', href: '/curriculum' },
   { title: 'Testimonials', href: '/testimonials' },
-  { title: 'Gallery', href: '/gallery' }
+  {
+    title: 'Others',
+    href: '#',
+    subLinks: [
+      { title: 'Gallery', href: "/gallery" },
+      { title: 'Activities', href: '/activities' },
+      { title: 'Sports', href: '/sports' },
+      { title: 'Our Specialty', href: '/our-specialty' }
+    ]
+  }
 ];

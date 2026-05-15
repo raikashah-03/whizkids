@@ -23,9 +23,9 @@ import srKgImg from "@/public/images/programs/sr-kg.jpg";
 // ─── Metadata ────────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title: "Our Programs | Whizkids Learning Center",
+  title: "Our Programs",
   description:
-    "Discover our broad range of early childhood programs — from Playgroup and Nursery to LKG and UKG. Each program is designed to nurture your child's natural curiosity and build a strong foundation.",
+    "Discover our broad range of early childhood programs at Whizkids International Preschool Jayamahal — from Playgroup and Nursery to LKG and UKG.",
   keywords: [
     "Whizkids programs",
     "preschool curriculum",
@@ -34,6 +34,28 @@ export const metadata: Metadata = {
     "kindergarten education",
     "child development",
   ],
+  openGraph: {
+    title: "Preschool Programs | Playgroup to Kindergarten",
+    description: "Nurturing your child's natural curiosity through age-appropriate programs at Whizkids International Preschool Jayamahal.",
+    url: "https://whizkidsinternational.in/programs",
+    siteName: "Whizkids International Preschool",
+    images: [
+      {
+        url: "/images/home-page-screenshot.png",
+        width: 1200,
+        height: 630,
+        alt: "Whizkids International Preschool Jayamahal Programs",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Preschool Programs | Playgroup to Kindergarten",
+    description: "Nurturing your child's natural curiosity through age-appropriate programs at Whizkids International Preschool Jayamahal.",
+    images: ["/images/home-page-screenshot.png"],
+  },
 };
 
 // ─── Static program data ──────────────────────────────────────────────────────

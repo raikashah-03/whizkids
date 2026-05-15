@@ -1,17 +1,34 @@
+import BreadCrumb from "@/components/BreadCrumb";
+import CtaSection from "@/components/CtaSection";
+import GallerySection from "@/components/GallerySection";
+import type { Metadata } from "next";
 import React from "react";
-import BreadCrumb from "@/components/BreadCrumb"
-import CtaSection from "@/components/CtaSection"
-import GallerySection from "@/components/GallerySection"
-import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Our Gallery | Whizkids Learning Center",
-  description: "Explore our photo gallery to see moments from classrooms, outdoor adventures, creative activities, and exciting events at Whizkids. See our happy learners in action!",
+  title: "Our Gallery",
+  description: "Explore our photo gallery to see moments from classrooms, outdoor adventures, creative activities, and exciting events at Whizkids International Preschool Jayamahal.",
   keywords: ["preschool gallery", "Whizkids classroom photos", "early education activities", "school events", "playgroup photos"],
   openGraph: {
     title: "A Glimpse into Whizkids | Our Photo Gallery",
-    description: "See the magic that happens every day at Whizkids — from creative classrooms to exciting outdoor adventures!",
-    images: ["/images/contact-banner.jpg"],
+    description: "See the magic that happens every day at Whizkids International Preschool Jayamahal — from creative classrooms to exciting outdoor adventures!",
+    url: "https://whizkidsinternational.in/gallery",
+    siteName: "Whizkids International Preschool",
+    images: [
+      {
+        url: "/images/home-page-screenshot.png",
+        width: 1200,
+        height: 630,
+        alt: "Whizkids International Preschool Jayamahal",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "A Glimpse into Whizkids | Our Photo Gallery",
+    description: "See the magic that happens every day at Whizkids International Preschool Jayamahal — from creative classrooms to exciting outdoor adventures!",
+    images: ["/images/home-page-screenshot.png"],
   },
 };
 

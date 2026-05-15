@@ -67,10 +67,33 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const blog = await getBlog(slug);
   if (!blog) return { title: "Blog Not Found" };
 
+  const description = blog.metaDescription || blog.overview;
+  const images = blog.mainImageUrl ? [blog.mainImageUrl] : ["/images/home-page-screenshot.png"];
+
   return {
     title: blog.title,
-    description: blog.metaDescription || blog.overview,
+    description: description,
     keywords: blog.metaKeywords,
+    openGraph: {
+      title: blog.title,
+      description: description,
+      url: `https://whizkidsinternational.in/blogs/${slug}`,
+      siteName: "Whizkids International Preschool",
+      images: images.map(url => ({
+        url,
+        width: 1200,
+        height: 630,
+        alt: blog.title,
+      })),
+      locale: "en_IN",
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: blog.title,
+      description: description,
+      images: images,
+    },
   };
 }
 

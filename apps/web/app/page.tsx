@@ -12,32 +12,38 @@ import { Metadata } from "next";
 import React from "react";
 
 export const metadata: Metadata = {
-  title: "Whizkids - The Best Preschool & Learning Center for Your Child",
-  description: "Join Whizkids Learning Center, where we blend creativity, play, and structured learning to build a strong foundation for your child's future. Explore our programs from Playgroup to Kindergarten.",
+  title: "Whizkids International Preschool Jayamahal | Best Preschool & Learning Center",
+  description: "Join Whizkids International Preschool Jayamahal, where we blend creativity, play, and structured learning to build a strong foundation for your child's future.",
   keywords: [
     "best preschool near me",
     "early childhood education",
     "playgroup programs",
     "nursery and kindergarten",
-    "Whizkids learning center",
+    "Whizkids International Preschool Jayamahal",
     "child development center",
     "preschool in India",
   ],
   openGraph: {
-    title: "Whizkids Learning Center | Where Every Child Blooms",
+    title: "Whizkids International Preschool Jayamahal | Where Every Child Blooms",
     description: "Explore our playful and nurturing environment designed for your child's early education journey.",
-    url: "https://whizkids.edu.in",
-    siteName: "Whizkids",
+    url: "https://whizkidsinternational.in",
+    siteName: "Whizkids International Preschool",
     images: [
       {
-        url: "/images/og-image.jpg",
+        url: "/images/home-page-screenshot.png",
         width: 1200,
         height: 630,
-        alt: "Whizkids Learning Center - Kids Playing and Learning",
+        alt: "Whizkids International Preschool Jayamahal - Kids Playing and Learning",
       },
     ],
     locale: "en_IN",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Whizkids International Preschool Jayamahal | Where Every Child Blooms",
+    description: "Explore our playful and nurturing environment designed for your child's early education journey.",
+    images: ["/images/home-page-screenshot.png"],
   },
 };
 
@@ -58,7 +64,7 @@ export default function Home(): React.JSX.Element {
       <TestimonialSection />
       <FAQPage />
       <BlogSection />
-      
+
       {/* ── Final Call to Action ── */}
       <CtaSection />
     </div>

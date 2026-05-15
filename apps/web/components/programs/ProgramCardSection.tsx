@@ -69,7 +69,7 @@ export default function ProgramCardSection({
               />
 
               {/* Blob background */}
-              <div className="absolute md:inset-0 mt-10 opacity-30 z-0 scale-110">
+              <div className="absolute inset-0 mt-10 opacity-30 z-0 scale-110">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="100%"

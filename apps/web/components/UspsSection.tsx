@@ -2,7 +2,8 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { BookOpen, Gamepad2, Lightbulb } from "lucide-react";
+import { Apple, BookOpen, Coins, Shield, ShieldAlert, Users } from "lucide-react";
+import Link from "next/link";
 import React, { useRef } from "react";
 
 if (typeof window !== "undefined") {
@@ -11,11 +12,11 @@ if (typeof window !== "undefined") {
 
 const usps = [
   {
-    id: "fun-quiz",
-    title: "Fun",
-    titleSpan: "Quiz",
-    description: "Test your understanding with a short but fun quizzes!",
-    icon: BookOpen,
+    id: "banking",
+    title: "Banking",
+    titleSpan: "(Buy & Sell)",
+    description: "Teaching early financial literacy through fun, interactive buying and selling role-play.",
+    icon: Coins,
     bg: "bg-[#EBDCFF]",
     iconBg: "text-white",
     iconColor: "text-foreground",
@@ -23,25 +24,61 @@ const usps = [
     decoration: "circles",
   },
   {
-    id: "creative-activities",
-    title: "Creative",
-    titleSpan: "Activities",
-    description: "Discover enjoyable activities such as coloring, crafting, and science.",
-    icon: Lightbulb,
+    id: "good-touch",
+    title: "Good Touch",
+    titleSpan: "Bad Touch",
+    description: "Empowering children with essential body safety awareness in a safe, sensitive environment.",
+    icon: Shield,
+    bg: "bg-[#E4F3F7]",
+    iconBg: "text-white/40",
+    iconColor: "text-skyblue-strong",
+    textColor: "text-foreground",
+    decoration: "wave",
+  },
+  {
+    id: "stranger-activity",
+    title: "Stranger",
+    titleSpan: "Activity",
+    description: "Crucial awareness activities teaching kids how to identify and react to unfamiliar adults.",
+    icon: ShieldAlert,
     bg: "bg-lavender-strong",
     iconBg: "text-white/20",
     iconColor: "text-white",
     textColor: "text-white",
+    decoration: "dots",
+  },
+  {
+    id: "healthy-food",
+    title: "Junk vs",
+    titleSpan: "Healthy Food",
+    description: "Guiding children to make nutritious choices and understand the impact of what they eat.",
+    icon: Apple,
+    bg: "bg-[#FFDE59]",
+    iconBg: "text-[#FFF3C4]",
+    iconColor: "text-foreground",
+    textColor: "text-foreground",
+    decoration: "circles",
+  },
+  {
+    id: "bedtime-stories",
+    title: "No-Screen",
+    titleSpan: "Bedtime Stories",
+    description: "Fostering imagination and calm routines with engaging, screen-free storytelling.",
+    icon: BookOpen,
+    bg: "bg-[#FDE9E9]",
+    iconBg: "text-white",
+    iconColor: "text-[#FF4D8D]",
+    textColor: "text-foreground",
     decoration: "wave",
   },
   {
-    id: "learn-with-games",
-    title: "Learn with",
-    titleSpan: "Games",
-    description: "Learn something new while your kids playing games!",
-    icon: Gamepad2,
-    bg: "bg-[#FFDE59]",
-    iconBg: "text-[#FFF3C4]",
+    id: "playdate",
+    title: "Fun",
+    titleSpan: "Playdates",
+    description: "Structured playdates focusing on social skills, sharing, and making lifelong friends.",
+    icon: Users,
+    bg: "bg-[#EBDCFF]",
+    iconBg: "text-white",
     iconColor: "text-foreground",
     textColor: "text-foreground",
     decoration: "dots",
@@ -177,9 +214,9 @@ export default function UspsSection(): React.JSX.Element {
         <div className="flex flex-col md:flex-row md:items-start justify-between mb-16 relative">
           <div className="z-10">
             <h2 className="usps-heading text-4xl md:text-5xl font-medium font-display text-foreground leading-[1.15]">
-              Why <span className="text-lavender-strong italic">Whizkids</span>
+              What separates us
               <br />
-              is the best
+              <span className="text-lavender-strong italic">from the rest</span>
             </h2>
           </div>
 
@@ -193,15 +230,16 @@ export default function UspsSection(): React.JSX.Element {
         {/* ── USP Cards ── */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
           {usps.map((usp) => (
-            <div
+            <Link
+              href={`/our-specialty#${usp.id}`}
               key={usp.id}
               className={`usps-card relative rounded-[2.5rem] p-8 md:p-10 flex flex-col gap-8 overflow-hidden
                 ${usp.bg}
                 md:min-h-[350px]
-                shadow-sm`}
+                shadow-sm hover:shadow-md transition-shadow cursor-pointer block hover:-translate-y-1 transform duration-300`}
             >
               {/* Top Right Decoration */}
-              <div className={`absolute top-0 right-0 w-32 h-32 opacity-30 ${usp.id === "creative-activities" ? "text-[#EBDCFF]" : usp.id === "fun-quiz" ? "text-lavender-strong" : "text-white"}`}>
+              <div className={`absolute top-0 right-0 w-32 h-32 opacity-30 text-white mix-blend-overlay`}>
                 {usp.decoration === "circles" && <ConcentricCircles className="w-full h-full" />}
                 {usp.decoration === "wave" && <WaveDecoration className="w-full h-full" />}
                 {usp.decoration === "dots" && <DotGrid className="w-full h-full" />}
@@ -226,8 +264,15 @@ export default function UspsSection(): React.JSX.Element {
                   {usp.description}
                 </p>
               </div>
-            </div>
+            </Link>
           ))}
+        </div>
+
+        {/* ── CTA Button ── */}
+        <div className="mt-12 flex justify-center">
+          <Link href="/our-specialty" className="inline-flex items-center justify-center px-8 py-4 text-lg font-bold rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors shadow-sm">
+            View All Specialties
+          </Link>
         </div>
 
         {/* ── Bottom stats (Individual Clouds) ── */}

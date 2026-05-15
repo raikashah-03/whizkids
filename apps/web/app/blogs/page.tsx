@@ -1,12 +1,12 @@
-import { Metadata } from "next";
-import { client } from "@/lib/sanity";
-import BreadCrumb from "@/components/BreadCrumb";
 import BlogGrid from "@/components/BlogGrid";
 import { Blog } from "@/components/BlogSection";
+import BreadCrumb from "@/components/BreadCrumb";
+import { client } from "@/lib/sanity";
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Insights & Stories | Whizkids Blog",
-  description: "Explore the latest parenting tips, early childhood education insights, and school updates from the Whizkids community. Stay informed and inspired as your child grows.",
+  title: "Insights & Stories",
+  description: "Explore the latest parenting tips, early childhood education insights, and school updates from the Whizkids International Preschool Jayamahal community.",
   keywords: [
     "preschool blog",
     "parenting tips",
@@ -17,8 +17,25 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "The Whizkids Blog | Stories that Inspire",
-    description: "Heartwarming stories and professional insights from the world of Whizkids.",
-    images: ["/images/blog-og-banner.jpg"],
+    description: "Heartwarming stories and professional insights from the world of Whizkids International Preschool Jayamahal.",
+    url: "https://whizkidsinternational.in/blogs",
+    siteName: "Whizkids International Preschool",
+    images: [
+      {
+        url: "/images/home-page-screenshot.png",
+        width: 1200,
+        height: 630,
+        alt: "Whizkids International Preschool Jayamahal",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Whizkids Blog | Stories that Inspire",
+    description: "Heartwarming stories and professional insights from the world of Whizkids International Preschool Jayamahal.",
+    images: ["/images/home-page-screenshot.png"],
   },
 };
 

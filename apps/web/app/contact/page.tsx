@@ -1,21 +1,37 @@
+import BreadCrumb from "@/components/BreadCrumb";
+import ContactForm from "@/components/ContactForm";
+import ContactInfo from "@/components/ContactInfo";
+import MapEmbadding from "@/components/MapEmbadding";
 import React from "react";
-import BreadCrumb from "@/components/BreadCrumb"
-import ContactForm from "@/components/ContactForm"
-import ContactInfo from "@/components/ContactInfo"
-import MapEmbadding from "@/components/MapEmbadding"
 
 
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Get in Touch | Contact Whizkids Learning Center",
-  description: "We’d love to hear from you! Whether you have questions, want to schedule a visit, or are ready to enroll your child, our team at Whizkids is here to help.",
+  title: "Get in Touch",
+  description: "We’d love to hear from you! Whether you have questions, want to schedule a visit, or are ready to enroll your child, our team at Whizkids International Preschool Jayamahal is here to help.",
   keywords: ["contact Whizkids", "preschool inquiry", "visit Whizkids", "school admission contact", "Whizkids location", "contact preschool", "enrollment inquiry"],
   openGraph: {
     title: "Connect with Whizkids | We're Here to Help",
-    description: "Have questions about our programs or admissions? Reach out to Whizkids today. We are happy to assist you with any inquiries regarding our curriculum, facilities, or enrollment process.",
-    images: ["/images/contact-banner.jpg"],
+    description: "Have questions about our programs or admissions? Reach out to Whizkids International Preschool Jayamahal today.",
+    url: "https://whizkidsinternational.in/contact",
+    siteName: "Whizkids International Preschool",
+    images: [
+      {
+        url: "/images/home-page-screenshot.png",
+        width: 1200,
+        height: 630,
+        alt: "Whizkids International Preschool Jayamahal",
+      },
+    ],
+    locale: "en_IN",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Connect with Whizkids | We're Here to Help",
+    description: "Have questions about our programs or admissions? Reach out to Whizkids International Preschool Jayamahal today.",
+    images: ["/images/home-page-screenshot.png"],
   },
   alternates: {
     canonical: "/contact",

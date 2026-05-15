@@ -175,6 +175,7 @@ export const blogType = defineType({
       media: 'mainImage',
     },
     prepare(selection) {
+      // eslint-disable-next-line typescript/no-unused-vars
       const { title, author } = selection
       return {
         ...selection,

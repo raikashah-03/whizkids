@@ -1,11 +1,11 @@
-import React from "react";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
-import WhatsAppFloat from "@/components/WhatsAppFloat";
 import { InquiryModalProvider } from "@/components/InquiryModalContext";
 import InquiryModalRoot from "@/components/InquiryModalRoot";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 import type { Metadata } from "next";
 import { DynaPuff, Nunito } from "next/font/google";
+import React from "react";
 import "./globals.css";
 
 const nunito = Nunito({
@@ -20,11 +20,45 @@ const dynaPuff = DynaPuff({
 
 export const metadata: Metadata = {
   title: {
-    default: "Whizkids Learning Center | Nurturing Young Minds",
-    template: "%s | Whizkids Learning Center",
+    default: "Whizkids International Preschool Jayamahal | Nurturing Young Minds",
+    template: "%s | Whizkids International Preschool Jayamahal",
   },
-  description: "Whizkids provides a playful and enriching environment for early childhood education, focusing on playgroup, nursery, and kindergarten programs.",
-  metadataBase: new URL("https://whizkids.edu.in"),
+  description: "Whizkids International Preschool Jayamahal provides a playful and enriching environment for early childhood education, focusing on playgroup, nursery, and kindergarten programs.",
+  keywords: [
+    "preschool in jayamahal",
+    "best playgroup near me",
+    "nursery school bangalore",
+    "kindergarten jayamahal",
+    "early childhood education",
+    "Whizkids International Preschool",
+    "top preschools in jayamahal",
+  ],
+  metadataBase: new URL("https://whizkidsinternational.in"),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Whizkids International Preschool Jayamahal",
+    description: "Nurturing young minds through play, exploration, and structured learning.",
+    url: "https://whizkidsinternational.in",
+    siteName: "Whizkids International Preschool",
+    images: [
+      {
+        url: "/images/home-page-screenshot.png",
+        width: 1200,
+        height: 630,
+        alt: "Whizkids International Preschool Jayamahal",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Whizkids International Preschool Jayamahal",
+    description: "Nurturing young minds through play, exploration, and structured learning.",
+    images: ["/images/home-page-screenshot.png"],
+  },
 };
 
 export default function RootLayout({

@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function ActivitiesPage() {
+export default function ActivitiesPage(): React.JSX.Element {
   return (
     <main className="min-h-screen bg-background flex flex-col">
       <BreadCrumb

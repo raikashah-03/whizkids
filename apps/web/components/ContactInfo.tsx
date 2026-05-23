@@ -1,3 +1,4 @@
+import React from "react";
 import { addressData } from "@/utils/consts";
 import { ShieldCheck } from "lucide-react";
 import Link from "next/link";

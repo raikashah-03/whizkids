@@ -1,3 +1,4 @@
+import React from "react";
 import { Lightbulb, Puzzle, Star } from "lucide-react";
 import Image from "next/image";
 import Heading from "./Headding";
@@ -26,7 +27,7 @@ const features = [
   },
 ];
 
-const BuildingFoundation = () => {
+const BuildingFoundation: React.FC = () => {
   return (
     <section className="overflow-hidden relative">
       <div className="container relative z-10 max-w-5xl!">

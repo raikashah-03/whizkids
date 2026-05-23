@@ -1,3 +1,4 @@
+import React from "react";
 import { ExternalLink, MapPin, Navigation } from "lucide-react";
 
 // Road-map view: !5e0! (was !5e1! = satellite / Earth view)

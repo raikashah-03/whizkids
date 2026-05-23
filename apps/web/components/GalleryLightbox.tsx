@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 
 import { GalleryCategory, GalleryItem } from "@/utils/gallery";
 import Image from "next/image";

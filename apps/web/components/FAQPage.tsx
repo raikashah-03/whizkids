@@ -14,11 +14,6 @@ const faqs = [
       "We maintain a low student-teacher ratio of 10:1 across all early education programs. This ensures personalized attention and allows our educators to cater to each child's individual learning needs.",
   },
   {
-    question: "Are meals provided at the school?",
-    answer:
-      "Yes, we provide nutritious, balanced, and freshly prepared meals planned by pediatric nutritionists. We also accommodate specific dietary requirements and allergies.",
-  },
-  {
     question: "What safety measures are in place?",
     answer:
       "Your child's safety is our top priority. We have 24/7 CCTV surveillance, restricted access control, thoroughly background-checked staff, and stringent hygiene protocols in all areas.",
@@ -28,6 +23,28 @@ const faqs = [
     answer:
       "Yes, we offer safe and comfortable transportation services within a certain radius. Our buses are equipped with GPS tracking and trained attendants.",
   },
+  {
+    question: "Are your teachers Montessori-trained?",
+    answer:
+      "Yes, our educators are Montessori-trained and experienced in early childhood, guiding children with care, patience, and understanding.",
+  },
+  {
+    question: "How do you communicate with parents?",
+    answer: "We stay in regular touch through WhatsApp updates, conversations, and feedback. With parent-teacher meetings, parent-orientation program, and playdates with parents, you’re always connected to your child’s progress."
+  },
+  {
+    question: "How do you help children settle in the first few days?",
+    answer: "We take it slow and gently. Our teachers give extra attention, helping children feel safe, comfortable, and gradually adjust at their own pace."
+  }, {
+    question: "How do you support shy or hesitant children?",
+    answer: "We gently encourage shy children to open up through activities like storytelling competitions, group play, and everyday interactions. Events like Annual Day give them a chance to participate in dance and speech, helping them overcome stage fright and build confidence at their own pace."
+  }, {
+    question: "Do you celebrate festivals and special occasions?",
+    answer: "Yes, we celebrate festivals and special days to help children learn culture, values, and joy through shared experiences. "
+  }, {
+    question: "How do you ensure hygiene and cleanliness?",
+    answer: "We maintain high standards of cleanliness with regular sanitisation and a child-friendly, hygienic environment."
+  }
 ];
 
 const FAQPage = (): React.JSX.Element => {

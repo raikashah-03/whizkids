@@ -11,13 +11,15 @@
 import Heading from "@/components/Headding";
 import InquireButton from "@/components/InquireButton";
 import daycareImg from "@/public/images/programs/daycare.png";
-import { Clock, Heart, ShieldCheck, Sparkles } from "lucide-react";
+import { Heart, Video, Award, Sparkles, Clock } from "lucide-react";
 import Image from "next/image";
 
 const features = [
-  { icon: ShieldCheck, title: "Safe Environment" },
-  { icon: Heart, title: "Dedicated Care" },
-  { icon: Clock, title: "Extended Hours" },
+  { icon: Heart, title: "Home-Like Care" },
+  { icon: Video, title: "Live CCTV Access" },
+  { icon: Award, title: "Trained Caregivers" },
+  { icon: Sparkles, title: "Clean & Cozy Spaces" },
+  { icon: Clock, title: "Open Till 6 PM" },
 ];
 
 export default function DaycareSection(): React.JSX.Element {
@@ -102,31 +104,29 @@ export default function DaycareSection(): React.JSX.Element {
               </div>
 
               {/* Body copy */}
-              <div className="space-y-6 text-gray-700 font-medium">
-                <p className="mid-text leading-relaxed">
-                  At Whizkids, our daycare program is more than just a supervision
-                  service — it is a warm, nurturing extension of your home. We
-                  understand that the early months and years are critical for a
-                  child&apos;s development, which is why our dedicated caregivers focus
-                  on building strong emotional bonds and providing personalized
-                  attention to every little one.
+              <div className="space-y-4 text-gray-700 font-medium text-sm md:text-base">
+                <p className="leading-relaxed">
+                  We know it’s not easy to leave your child and go. There’s always that small thought in your mind — are they okay?
                 </p>
-                <p className="mid-text leading-relaxed">
-                  Our state-of-the-art facility is strictly child-proofed and
-                  monitored to ensure the highest standards of safety and hygiene.
-                  We provide a stimulating environment filled with age-appropriate
-                  activities that encourage sensory exploration and cognitive growth.
+                <p className="leading-relaxed">
+                  That’s why at Whizkids International Jayamahal, we’ve created a daycare that truly feels like a second home. A place where your child is cared for with the same warmth and attention they receive from you. We notice the little things, like warming their meals so they feel comforted, settling them in gently for nap time, and making sure their day flows calmly, without rush. With live CCTV access, you’re never far away, you can check in anytime, and feel reassured.
+                </p>
+                <p className="leading-relaxed">
+                  Our trained staff, clean and cozy spaces, and simple daily routine are all designed to make your child feel safe, settled, and happy. From quiet moments to playful ones, their day is filled with care, right up to 6 PM.
+                </p>
+                <p className="leading-relaxed font-bold text-primary">
+                  Because when they feel at home, you can feel at peace.
                 </p>
               </div>
 
               {/* Features — mirrors activity icon row */}
-              <div className="flex flex-wrap gap-8 py-6 border-y border-primary/10">
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 py-6 border-y border-primary/10">
                 {features.map(({ icon: Icon, title }) => (
-                  <div key={title} className="flex items-center gap-3">
-                    <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-primary shadow-sm">
-                      <Icon className="w-6 h-6" />
+                  <div key={title} className="flex items-center gap-2.5">
+                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white flex items-center justify-center text-primary shadow-sm shrink-0">
+                      <Icon className="w-5 h-5 md:w-6 md:h-6" />
                     </div>
-                    <span className="text-lg font-black text-gray-900">{title}</span>
+                    <span className="text-sm md:text-base font-black text-gray-900 leading-tight">{title}</span>
                   </div>
                 ))}
               </div>

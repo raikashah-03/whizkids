@@ -7,7 +7,7 @@ import TopBottomShapeSection from "./ui/top-bottom-shape-section";
 const features = [
   {
     title: "Expert Educators",
-    description: "Heart-led teaching with experienced staff dedicated to early childhood.",
+    description: "Heart-led teaching with experienced, Montessori-trained educators dedicated to early childhood. ",
     icon: Heart,
     color: "text-pink-strong",
     bgColor: "bg-pink-light",
@@ -97,12 +97,11 @@ const WhyChoose = (): React.JSX.Element => {
 
           {/* Right Side: Supporting Text */}
           <div className="space-y-3 md:space-y-6 mt-5 md:w-[60%] text-center md:text-left">
-            <p className="mid-text">
-              We provide a nurturing environment where your child can explore,
-              learn, and grow with confidence and joy every single day. Our dedicated educators bring years of experience and boundless passion to every classroom.
+            <p className="mid-text-1">
+              We focus on creating a nurturing environment where your child grows in every way, with confidence, curiosity, and joy. Our approach supports social, cognitive, emotional, and physical development, guided by experienced educators who understand the needs of early childhood.
             </p>
-            <p className="mid-text">
-              By blending structured curriculum with creative, unstructured play, we ensure emotional and academic development go hand-in-hand. Whether it is painting, storytime, or problem-solving games, every activity is designed to spark curiosity.
+            <p className="mid-text-1">
+              Through a thoughtful mix of structured learning and play, we build social development through sharing and group activities, and cognitive development through simple thinking and problem-solving. Children strengthen their gross motor skills through active play, and fine motor skills through drawing and hands-on tasks. We nurture emotional development by celebrating festivals, practicing daily prayer, and helping children express their feelings, while language development is encouraged through conversations, stories, storytelling activities, and everyday interactions.
             </p>
           </div>
 

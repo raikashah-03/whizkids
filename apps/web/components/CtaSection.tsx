@@ -21,7 +21,7 @@ export default function CtaSection(): React.JSX.Element {
             </h2>
 
             <p className="text-foreground/70 text-base md:text-lg font-medium leading-relaxed mb-10 max-w-md">
-              Join the Whizkids family and watch your little one thrive in a safe, fun, and creative learning environment. Spaces are filling up fast.
+              Join the Whizkids family and watch your little one thrive in a safe, fun, and creative learning environment. Limited seats available
             </p>
 
             <Link

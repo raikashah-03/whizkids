@@ -14,8 +14,8 @@ const usps = [
   {
     id: "banking",
     title: "Banking",
-    titleSpan: "(Buy & Sell)",
-    description: "Teaching early financial literacy through fun, interactive buying and selling role-play.",
+    titleSpan: "(Buying & Selling)",
+    description: "Learning the basics of money through fun buying and selling activities.",
     icon: Coins,
     bg: "bg-[#EBDCFF]",
     iconBg: "text-white",
@@ -25,9 +25,9 @@ const usps = [
   },
   {
     id: "good-touch",
-    title: "Good Touch",
+    title: "Good Touch /",
     titleSpan: "Bad Touch",
-    description: "Empowering children with essential body safety awareness in a safe, sensitive environment.",
+    description: "Helping children understand safe and unsafe touch in a simple, caring way.",
     icon: Shield,
     bg: "bg-[#E4F3F7]",
     iconBg: "text-white/40",
@@ -39,7 +39,7 @@ const usps = [
     id: "stranger-activity",
     title: "Stranger",
     titleSpan: "Activity",
-    description: "Crucial awareness activities teaching kids how to identify and react to unfamiliar adults.",
+    description: "Teaching kids how to पहचान strangers and respond safely in real-life situations.",
     icon: ShieldAlert,
     bg: "bg-lavender-strong",
     iconBg: "text-white/20",
@@ -51,7 +51,7 @@ const usps = [
     id: "healthy-food",
     title: "Junk vs",
     titleSpan: "Healthy Food",
-    description: "Guiding children to make nutritious choices and understand the impact of what they eat.",
+    description: "Helping children choose what’s good for their body in a fun, simple way.",
     icon: Apple,
     bg: "bg-[#FFDE59]",
     iconBg: "text-[#FFF3C4]",
@@ -63,7 +63,7 @@ const usps = [
     id: "bedtime-stories",
     title: "No-Screen",
     titleSpan: "Bedtime Stories",
-    description: "Fostering imagination and calm routines with engaging, screen-free storytelling.",
+    description: "Calm, screen-free stories that build imagination and better sleep habits.",
     icon: BookOpen,
     bg: "bg-[#FDE9E9]",
     iconBg: "text-white",
@@ -75,7 +75,7 @@ const usps = [
     id: "playdate",
     title: "Fun",
     titleSpan: "Playdates",
-    description: "Structured playdates focusing on social skills, sharing, and making lifelong friends.",
+    description: "We organise special playdates so busy parents can slow down and spend quality time with their children.",
     icon: Users,
     bg: "bg-[#EBDCFF]",
     iconBg: "text-white",
@@ -211,16 +211,17 @@ export default function UspsSection(): React.JSX.Element {
       <div className="container max-w-6xl mx-auto px-4">
 
         {/* ── Section header ── */}
-        <div className="flex flex-col md:flex-row md:items-start justify-between mb-16 relative">
+        <div className="flex flex-col md:flex-row md:items-center justify-between mb-16 relative">
           <div className="z-10">
-            <h2 className="usps-heading text-4xl md:text-5xl font-medium font-display text-foreground leading-[1.15]">
+            <h2 className="usps-heading text-4xl md:text-5xl font-medium font-display text-foreground leading-[1.15] mb-2">
               What separates us
               <br />
               <span className="text-lavender-strong italic">from the rest</span>
             </h2>
+            <p className="max-w-2xl text-muted-foreground mid-text-1 leading-relaxed">Some things aren’t taught in books.We teach what children usually learn much later, through real-world experiences that build true confidence, so they grow up confident, aware, and not afraid to face the world.</p>
           </div>
 
-          <div className="relative w-full md:w-[350px] h-32 md:h-auto mt-8 md:mt-0 shrink-0 hidden sm:block">
+          <div className="relative w-full md:w-[350px] h-32 mt-8 md:mt-0 shrink-0 hidden sm:block">
             <div className="usps-tag absolute top-2 right-36 px-5 py-1.5 bg-[#EBDCFF] text-lavender-strong text-sm font-bold rounded-full -rotate-[10deg] shadow-sm tracking-wide">#funny</div>
             <div className="usps-tag absolute top-0 right-10 px-5 py-1.5 bg-[#FFDE59] text-foreground text-sm font-bold rounded-full rotate-[8deg] shadow-sm tracking-wide">#enjoy</div>
             <div className="usps-tag absolute top-14 right-20 px-5 py-1.5 bg-lavender-strong text-white text-sm font-bold rounded-full rotate-[-5deg] shadow-sm tracking-wide">#happy</div>
@@ -278,8 +279,8 @@ export default function UspsSection(): React.JSX.Element {
         {/* ── Bottom stats (Individual Clouds) ── */}
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 items-center justify-items-center">
           {[
-            { value: "1,000+", label: "FAMILIES", color: "text-lavender-strong", stopColor: "#EBDCFF" },
-            { value: "6+", label: "YEARS", color: "text-[#FF8A66]", stopColor: "#FFE4E1" },
+            { value: "10k+", label: "FAMILIES", color: "text-lavender-strong", stopColor: "#EBDCFF" },
+            { value: "14+", label: "YEARS", color: "text-[#FF8A66]", stopColor: "#FFE4E1" },
             { value: "12+", label: "PROGRAMS", color: "text-primary", stopColor: "#FFF3C4" },
             { value: "100%", label: "SAFE", color: "text-lavender-strong", stopColor: "#EBDCFF" },
           ].map((stat, i) => (

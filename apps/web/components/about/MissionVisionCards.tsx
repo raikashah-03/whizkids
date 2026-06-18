@@ -3,6 +3,7 @@ import Heading from "@/components/Headding";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import type { LucideIcon } from "lucide-react";
 import { Eye, Heart, Target } from "lucide-react";
 import Image from "next/image";
 import React, { useRef } from "react";
@@ -12,12 +13,29 @@ if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
-const cards = [
+interface CardItem {
+  id: string;
+  title: string;
+  spanTitle: string;
+  paragraphs?: string[];
+  valuesList?: { title: string; text: string }[];
+  icon: LucideIcon;
+  bg: string;
+  accent: string;
+  borderColor: string;
+}
+
+const cards: CardItem[] = [
   {
     id: "mission",
     title: "Our",
     spanTitle: "Mission",
-    description: "To cultivate a nurturing, inclusive, and joyful learning environment where every child feels valued, safe, and heard. We strive to empower young minds through play-based and experiential learning, ensuring that each child discovers their unique talents and builds a strong foundation for lifelong happiness.",
+    paragraphs: [
+      "At Whizkids International Preschool, Jayamahal, everything we do comes from a simple place: we want your child to feel happy, comfortable, and confident as they begin their learning journey.",
+      "We create a positive and caring environment where children are encouraged to explore, ask questions, and grow at their own pace, without pressure. Because in these early years, feeling safe and understood matters more than anything else.",
+      "Our focus is to gently build a strong foundation while helping each child discover their unique potential. We truly believe every child is different, and with the right care, attention, and encouragement, they begin to show you what they’re capable of, naturally, in their own time.",
+      "And that’s what we’re here for, to support them and to give you the peace of mind that your child is in the right place."
+    ],
     icon: Target,
     bg: "bg-[#FFF6F0]", // Solid color to avoid transparency
     accent: "text-peach-strong",
@@ -27,7 +45,12 @@ const cards = [
     id: "vision",
     title: "Our",
     spanTitle: "Vision",
-    description: "To be a leading early childhood center that inspires the next generation of confident, compassionate, and resilient learners. We envision a vibrant community where children thrive, educators are passionate, and parents are active partners in the beautiful journey of their child's early development.",
+    paragraphs: [
+      "At Whizkids International Preschool, Jayamahal, we see these early years as the time when children slowly start becoming themselves. How they feel, how they respond, how confident they are, it all begins here.",
+      "So we keep things simple and gentle. We help them build confidence, pick up good habits, and understand values through small, everyday moments, not pressure. Learning happens in a way that feels easy and enjoyable for them.",
+      "We gently support all aspects of your child’s growth—social, emotional, physical, and cognitive, so nothing important is missed.",
+      "Because these early years aren’t just about learning, they’re about shaping who they are becoming."
+    ],
     icon: Eye,
     bg: "bg-[#E4F3F7]", // Solid color
     accent: "text-skyblue-strong",
@@ -37,7 +60,32 @@ const cards = [
     id: "values",
     title: "Our",
     spanTitle: "Values",
-    description: "Respect, Empathy, and Integrity are at the heart of everything we do. We believe in building strong partnerships with parents and creating a safe space where curiosity is celebrated, kindness is practiced daily, and every child is encouraged to be their most authentic self.",
+    valuesList: [
+      {
+        title: "We see the child, not just the age",
+        text: "Every child has a unique potential. We take the time to understand who they are, and help them grow in their own way."
+      },
+      {
+        title: "Care comes first",
+        text: "Children open up when they feel safe and comfortable. We create a space where they feel at ease, every single day."
+      },
+      {
+        title: "We grow the whole child",
+        text: "We support their social, emotional, physical, and cognitive development because every part of their growth matters."
+      },
+      {
+        title: "We don’t rush learning",
+        text: "There’s no pressure. Children learn best when they enjoy the process and move at their own pace."
+      },
+      {
+        title: "Parents are true partners",
+        text: "We don’t just update you, we involve you. Through regular conversations, meetings, and shared moments, you stay a part of your child’s everyday journey."
+      },
+      {
+        title: "We grow together",
+        text: "When school and parents work together, children feel more secure, more understood, and more confident. That connection makes all the difference."
+      }
+    ],
     icon: Heart,
     bg: "bg-[#EBDFFF]", // Solid color
     accent: "text-lavender-strong",
@@ -103,28 +151,46 @@ const MissionVisionCards = (): React.JSX.Element => {
                 ref={(el) => {
                   cardRefs.current[index] = el;
                 }}
-                className={`sticky top-[15vh] w-full max-w-[600px] rounded-[2.5rem] p-8 md:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.12)] border ${card.borderColor} ${card.bg} transform-gpu`}
+                className={`sticky top-[15vh] w-full max-w-[850px] rounded-[2rem] md:rounded-[2.5rem] p-5 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.12)] border ${card.borderColor} ${card.bg} transform-gpu`}
                 style={{
                   zIndex: index,
                   // Slight offset for each card's sticky position to create a staggered stacked look
                   top: `calc(15vh + ${index * 15}px)`
                 }}
               >
-                <div className="flex flex-col items-center text-center gap-6">
-                  <div className={`w-16 h-16 md:w-20 md:h-20 shrink-0 rounded-full bg-white flex items-center justify-center shadow-sm ${card.accent}`}>
-                    <card.icon className="w-8 h-8 md:w-10 md:h-10" />
+                <div className="flex flex-col items-center text-center gap-4 md:gap-6">
+                  <div className={`w-12 h-12 md:w-16 md:h-16 shrink-0 rounded-full bg-white flex items-center justify-center shadow-sm ${card.accent}`}>
+                    <card.icon className="w-6 h-6 md:w-8 md:h-8" />
                   </div>
                   <div className="flex flex-col items-center w-full">
-                    <div className="mb-4">
+                    <div className="mb-3 md:mb-4">
                       <Heading
                         headingText={card.title}
                         spanText={card.spanTitle}
                         className="justify-center! scale-90 md:scale-100"
                       />
                     </div>
-                    <p className="text-foreground/80 font-medium text-base md:text-lg leading-relaxed">
-                      {card.description}
-                    </p>
+                    {card.paragraphs && (
+                      <div className="flex flex-col gap-3 md:gap-4 text-foreground/80 font-medium text-sm md:text-base leading-relaxed text-center">
+                        {card.paragraphs.map((para, i) => (
+                          <p key={i}>{para}</p>
+                        ))}
+                      </div>
+                    )}
+                    {card.valuesList && (
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 text-left w-full mt-3 md:mt-4">
+                        {card.valuesList.map((val, i) => (
+                          <div key={i} className="flex flex-col gap-1">
+                            <p className="font-bold text-sm md:text-base text-foreground/90">
+                              {val.title}
+                            </p>
+                            <p className="text-foreground/80 font-medium text-xs md:text-sm leading-relaxed">
+                              {val.text}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>

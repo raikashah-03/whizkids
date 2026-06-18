@@ -1,8 +1,10 @@
+"use client";
+
 import { urlFor } from "@/lib/sanity";
 import { LightBrightColors } from "@/utils/consts";
 import { Star } from "lucide-react";
 import Image from "next/image";
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Testimonial } from "./TestimonialSection";
 
 interface TestimonialCardProps {
@@ -13,6 +15,32 @@ interface TestimonialCardProps {
 
 const TestimonialCard = ({ testimonial, variant = "plain", index = 0 }: TestimonialCardProps): React.JSX.Element => {
   const colorScheme = LightBrightColors[index % LightBrightColors.length] || LightBrightColors[0];
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [isTruncated, setIsTruncated] = useState(false);
+  const textRef = useRef<HTMLParagraphElement>(null);
+
+  useEffect(() => {
+    setIsExpanded(false);
+  }, [testimonial.message]);
+
+  useEffect(() => {
+    if (isExpanded) return;
+
+    const checkTruncation = () => {
+      if (textRef.current) {
+        setIsTruncated(textRef.current.scrollHeight > textRef.current.clientHeight);
+      }
+    };
+
+    // Delay slightly to ensure browser rendering has settled
+    const timeout = setTimeout(checkTruncation, 100);
+    window.addEventListener("resize", checkTruncation);
+
+    return () => {
+      clearTimeout(timeout);
+      window.removeEventListener("resize", checkTruncation);
+    };
+  }, [testimonial.message, isExpanded]);
 
   return (
     <div className="bg-white rounded-[2.5rem] p-5 md:p-8 shadow-xl shadow-gray-200/50 flex flex-col relative group transition-all duration-500 border border-transparent hover:border-gray-100">
@@ -40,9 +68,23 @@ const TestimonialCard = ({ testimonial, variant = "plain", index = 0 }: Testimon
           </div>
 
           <div className="flex-1">
-            <p className="text-gray-700 leading-relaxed italic text-sm md:text-base">
+            <p
+              ref={textRef}
+              className={`text-gray-700 leading-relaxed italic text-sm md:text-base transition-all duration-300 ${
+                isExpanded ? "" : "line-clamp-4"
+              }`}
+            >
               &quot;{testimonial.message}&quot;
             </p>
+            {isTruncated && (
+              <button
+                onClick={() => setIsExpanded(!isExpanded)}
+                className="text-xs font-black mt-2 hover:underline focus:outline-none transition-colors"
+                style={{ color: colorScheme?.darkColor }}
+              >
+                {isExpanded ? "See Less" : "See More"}
+              </button>
+            )}
           </div>
 
           {/* Rating */}

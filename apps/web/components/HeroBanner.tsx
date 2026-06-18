@@ -284,7 +284,7 @@ export default function HeroBanner(): React.JSX.Element {
             className="inline-flex items-center justify-center text-center gap-2 px-5 py-2 rounded-[2rem] md:rounded-full bg-peach border border-peach-strong/20 text-peach-strong font-black text-[10px] md:text-xs uppercase tracking-[0.15em] shadow-sm mb-2 max-w-[280px] md:max-w-none"
           >
             <span className="hidden md:inline-block w-2 h-2 shrink-0 rounded-full bg-peach-strong" />
-            <span>Whizkids International Preschool</span>
+            <span>Whizkids International Jayamahal</span>
           </div>
 
           {/* Swirly Arrow pointing to heading */}
@@ -305,7 +305,7 @@ export default function HeroBanner(): React.JSX.Element {
                 <path id="circlePath" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" fill="none" />
                 <text fill="currentColor" className="text-[12px] md:text-[13px] font-bold tracking-[0.15em] uppercase text-foreground">
                   <textPath href="#circlePath" startOffset="0%">
-                    WHIZKIDS PRESCHOOL • WHIZKIDS PRESCHOOL •
+                    • WHIZKIDS - JAYAMAHAL
                   </textPath>
                 </text>
               </svg>

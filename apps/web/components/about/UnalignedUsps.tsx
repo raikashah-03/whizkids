@@ -82,14 +82,14 @@ const UnalignedUsps = (): React.JSX.Element => {
         {/* Unaligned Trendy Grid */}
         <div className="grid grid-cols-2 md:flex md:flex-wrap md:justify-center gap-4 md:gap-12 relative max-w-5xl mx-auto justify-items-center">
           <CloudStat
-            value="1,000+"
+            value="10k+"
             label="FAMILIES"
             color="text-lavender-strong"
             stopColor="#EBDCFF"
             className="md:-mt-10"
           />
           <CloudStat
-            value="6+"
+            value="14+"
             label="YEARS"
             color="text-[#FF8A66]"
             stopColor="#FFE4E1"

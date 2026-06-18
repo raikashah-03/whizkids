@@ -14,6 +14,7 @@ interface ProgramSection {
   id: string;
   title: string;
   age: string;
+  tagline?: string;
   description: string;
   curriculum: readonly string[];
   image: any;
@@ -28,6 +29,7 @@ export default function ProgramCardSection({
   id,
   title,
   age,
+  tagline,
   description,
   curriculum,
   image,
@@ -139,9 +141,14 @@ export default function ProgramCardSection({
                 <h2 className="text-3xl md:text-4xl font-black text-gray-900 leading-tight font-display italic">
                   {title}
                 </h2>
+                {tagline && (
+                  <p className="text-lg md:text-xl font-bold text-gray-800 font-display">
+                    {tagline}
+                  </p>
+                )}
               </div>
 
-              <p className="mid-text text-gray-600 leading-relaxed font-medium">
+              <p className="mid-text text-gray-600 leading-relaxed font-medium text-sm md:text-base">
                 {description}
               </p>
 
@@ -149,13 +156,13 @@ export default function ProgramCardSection({
                 <h4 className="text-sm font-black text-gray-400 uppercase tracking-widest">
                   Curriculum Focus
                 </h4>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2.5">
                   {curriculum.map((item) => (
-                    <div key={item} className="flex items-start gap-2.5 group">
+                    <div key={item} className="flex items-start gap-2 group">
                       <CheckCircle2
-                        className={`w-5 h-5 shrink-0 mt-0.5 ${accentColor} opacity-70`}
+                        className={`w-4 h-4 md:w-5 md:h-5 shrink-0 mt-0.5 md:mt-1 ${accentColor} opacity-80`}
                       />
-                      <span className="font-bold text-gray-700 group-hover:text-gray-900 transition-colors">
+                      <span className="font-semibold text-gray-700 group-hover:text-gray-900 transition-colors text-sm md:text-[15px] leading-tight md:leading-normal">
                         {item}
                       </span>
                     </div>

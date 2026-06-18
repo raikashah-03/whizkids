@@ -40,11 +40,7 @@ const AboutHeroContent = (): React.JSX.Element => {
         />
 
         <p className="text-base md:text-lg lg:text-xl text-foreground/80 font-medium leading-relaxed max-w-4xl mx-auto mb-12">
-          At Whizkids Learning Center, we believe that every child is uniquely talented and naturally curious.
-          Our mission is to provide a nurturing, safe, and stimulating environment where young minds can explore,
-          discover, and grow. Through a blend of creative play and structured learning, we build a strong
-          foundation for a lifetime of success and happiness. We are dedicated to partnering with parents to ensure
-          every child receives the personalized attention they need to thrive both academically and socially.
+          At Whizkids International Jayamahal, we believe every child has a unique potential, and we take the time to notice and nurture it in our own gentle way. In a warm, safe, and happy environment, children learn through play, conversations, and everyday experiences, growing in confidence as they discover what they enjoy. We don’t believe in one path for all; whether a child grows into a doctor, artist, writer, singer, or sportsperson, we support who they are becoming, because all paths matter, while staying closely connected with parents every step of the way.
         </p>
 
         {/* <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-8 border-t border-gray-200/50">

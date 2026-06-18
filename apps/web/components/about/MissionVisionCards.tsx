@@ -151,34 +151,34 @@ const MissionVisionCards = (): React.JSX.Element => {
                 ref={(el) => {
                   cardRefs.current[index] = el;
                 }}
-                className={`sticky top-[15vh] w-full max-w-[850px] rounded-[2rem] md:rounded-[2.5rem] p-5 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.12)] border ${card.borderColor} ${card.bg} transform-gpu`}
+                className={`sticky top-[15vh] w-full max-w-[850px] h-[500px] md:h-auto rounded-[2rem] md:rounded-[2.5rem] p-5 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.12)] border ${card.borderColor} ${card.bg} transform-gpu`}
                 style={{
                   zIndex: index,
                   // Slight offset for each card's sticky position to create a staggered stacked look
                   top: `calc(15vh + ${index * 15}px)`
                 }}
               >
-                <div className="flex flex-col items-center text-center gap-4 md:gap-6">
+                <div className="flex flex-col items-center text-center gap-3 md:gap-6 h-full w-full">
                   <div className={`w-12 h-12 md:w-16 md:h-16 shrink-0 rounded-full bg-white flex items-center justify-center shadow-sm ${card.accent}`}>
                     <card.icon className="w-6 h-6 md:w-8 md:h-8" />
                   </div>
-                  <div className="flex flex-col items-center w-full">
-                    <div className="mb-3 md:mb-4">
-                      <Heading
-                        headingText={card.title}
-                        spanText={card.spanTitle}
-                        className="justify-center! scale-90 md:scale-100"
-                      />
-                    </div>
+                  <div className="mb-1 md:mb-4 shrink-0">
+                    <Heading
+                      headingText={card.title}
+                      spanText={card.spanTitle}
+                      className="justify-center! scale-90 md:scale-100"
+                    />
+                  </div>
+                  <div className="flex-1 overflow-y-auto md:overflow-visible w-full pr-1 md:pr-0">
                     {card.paragraphs && (
-                      <div className="flex flex-col gap-3 md:gap-4 text-foreground/80 font-medium text-sm md:text-base leading-relaxed text-center">
+                      <div className="flex flex-col gap-3 md:gap-4 text-foreground/80 font-medium text-sm md:text-base leading-relaxed text-center pb-2">
                         {card.paragraphs.map((para, i) => (
                           <p key={i}>{para}</p>
                         ))}
                       </div>
                     )}
                     {card.valuesList && (
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 text-left w-full mt-3 md:mt-4">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 text-left w-full pb-2">
                         {card.valuesList.map((val, i) => (
                           <div key={i} className="flex flex-col gap-1">
                             <p className="font-bold text-sm md:text-base text-foreground/90">

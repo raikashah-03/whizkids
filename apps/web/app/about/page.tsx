@@ -6,6 +6,7 @@ import React from "react";
 import AboutHeroContent from "@/components/about/AboutHeroContent";
 import MissionVisionCards from "@/components/about/MissionVisionCards";
 import TeachingPhilosophy from "@/components/about/TeachingPhilosophy";
+import AwardsSection from "@/components/AwardsSection";
 import UnalignedUsps from "@/components/about/UnalignedUsps";
 
 // Import existing shared components
@@ -69,6 +70,9 @@ const AboutPage = (): React.JSX.Element => {
 
       {/* ── Teaching Philosophy ── */}
       <TeachingPhilosophy />
+
+      {/* ── Awards Section ── */}
+      <AwardsSection />
 
       {/* ── FAQ Section ── */}
       <FAQPage />

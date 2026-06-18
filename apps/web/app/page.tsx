@@ -6,6 +6,7 @@ import HeroBanner from "@/components/HeroBanner";
 import ProgramPage from "@/components/ProgramPage";
 import SpecialTagline from "@/components/SpecialTagline";
 import TestimonialSection from "@/components/TestimonialSection";
+import AwardsSection from "@/components/AwardsSection";
 import UspsSection from "@/components/UspsSection";
 import WhyChoose from "@/components/WhyChoose";
 import { Metadata } from "next";
@@ -62,6 +63,7 @@ export default function Home(): React.JSX.Element {
       <BuildingFoundation />
       <ProgramPage />
       <TestimonialSection />
+      <AwardsSection />
       <FAQPage />
       <BlogSection />
 

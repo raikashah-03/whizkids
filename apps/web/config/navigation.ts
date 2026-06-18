@@ -22,6 +22,7 @@ export const NAVIGATION_LINKS = [
     ]
   },
   { title: 'Curriculum', href: '/curriculum' },
+  { title: 'Awards', href: '/awards' },
   { title: 'Testimonials', href: '/testimonials' },
   {
     title: 'Others',

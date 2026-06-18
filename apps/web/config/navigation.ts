@@ -31,7 +31,8 @@ export const NAVIGATION_LINKS = [
       { title: 'Gallery', href: "/gallery" },
       { title: 'Activities', href: '/activities' },
       { title: 'Sports', href: '/sports' },
-      { title: 'Our Specialty', href: '/our-specialty' }
+      { title: 'Our Specialty', href: '/our-specialty' },
+      { title: 'Blogs', href: '/blogs' }
     ]
   }
 ];

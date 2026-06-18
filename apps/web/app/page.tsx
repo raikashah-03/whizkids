@@ -9,6 +9,8 @@ import TestimonialSection from "@/components/TestimonialSection";
 import AwardsSection from "@/components/AwardsSection";
 import UspsSection from "@/components/UspsSection";
 import WhyChoose from "@/components/WhyChoose";
+import { client } from "@/lib/sanity";
+import { AWARDS, mapSanityAward } from "@/config/awards";
 import { Metadata } from "next";
 import React from "react";
 
@@ -48,7 +50,21 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Home(): React.JSX.Element {
+export default async function Home(): Promise<React.JSX.Element> {
+  let awardsList = AWARDS;
+  try {
+    const sanityAwards = await client.fetch(
+      `*[_type == "award"] | order(year desc, _createdAt desc)`,
+      {},
+      { next: { revalidate: 60 } }
+    );
+    if (sanityAwards && sanityAwards.length > 0) {
+      awardsList = sanityAwards.map(mapSanityAward);
+    }
+  } catch (error) {
+    console.error("Failed to fetch awards from Sanity:", error);
+  }
+
   return (
     <div>
       {/* ── Hero ── */}
@@ -63,7 +79,7 @@ export default function Home(): React.JSX.Element {
       <BuildingFoundation />
       <ProgramPage />
       <TestimonialSection />
-      <AwardsSection />
+      <AwardsSection initialAwards={awardsList} />
       <FAQPage />
       <BlogSection />
 

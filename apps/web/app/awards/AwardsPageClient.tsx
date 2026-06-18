@@ -1,13 +1,17 @@
 "use client";
 
 import CtaSection from "@/components/CtaSection";
-import { AWARDS } from "@/config/awards";
+import { AwardItem } from "@/config/awards";
 import { motion } from "framer-motion";
 import { Calendar, Landmark, Trophy } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 
-const AwardsPageClient = (): React.JSX.Element => {
+interface AwardsPageClientProps {
+  initialAwards: AwardItem[];
+}
+
+const AwardsPageClient = ({ initialAwards }: AwardsPageClientProps): React.JSX.Element => {
   return (
     <main className="min-h-screen bg-white">
       {/* Dynamic styles for animating gradients */}
@@ -54,7 +58,7 @@ const AwardsPageClient = (): React.JSX.Element => {
             </div>
 
             <span className="text-xs font-black uppercase tracking-[0.25em] text-primary mb-3">
-              Whizkids Jayamahal
+              Whizkids International Jayamahal
             </span>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 leading-tight font-display italic mb-6">
@@ -73,7 +77,7 @@ const AwardsPageClient = (): React.JSX.Element => {
 
       {/* ── Awards Detailed List ── */}
       <div className="flex flex-col">
-        {AWARDS.map((award, index) => {
+        {initialAwards.map((award, index) => {
           const isEven = index % 2 === 0;
 
           return (

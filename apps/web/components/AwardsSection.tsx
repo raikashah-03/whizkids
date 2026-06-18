@@ -1,6 +1,6 @@
 "use client";
 
-import { AWARDS } from "@/config/awards";
+import { AWARDS, AwardItem } from "@/config/awards";
 import Heading from "@/components/Headding";
 import { ChevronLeft, ChevronRight, ArrowRight, Trophy } from "lucide-react";
 import { motion, useInView } from "framer-motion";
@@ -15,8 +15,12 @@ const ACCENTS = [
   { border: "group-hover:border-[#9B5FFF]/30", shadow: "group-hover:shadow-[0_20px_50px_rgba(155,95,255,0.12)]", bg: "bg-[#9B5FFF]/5", text: "text-[#9B5FFF]" }
 ];
 
-const AwardsSection = (): React.JSX.Element => {
-  const [currentIndex, setCurrentIndex] = useState(AWARDS.length);
+interface AwardsSectionProps {
+  initialAwards?: AwardItem[];
+}
+
+const AwardsSection = ({ initialAwards = AWARDS }: AwardsSectionProps): React.JSX.Element => {
+  const [currentIndex, setCurrentIndex] = useState(initialAwards.length);
   const [visibleCount, setVisibleCount] = useState(3);
   const [isHovered, setIsHovered] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(true);
@@ -24,8 +28,8 @@ const AwardsSection = (): React.JSX.Element => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
 
-  const N = AWARDS.length;
-  const extendedAwards = [...AWARDS, ...AWARDS, ...AWARDS];
+  const N = initialAwards.length;
+  const extendedAwards = [...initialAwards, ...initialAwards, ...initialAwards];
 
   useEffect(() => {
     const handleResize = () => {

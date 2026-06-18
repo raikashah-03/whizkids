@@ -1,7 +1,8 @@
-import trophyImg from "@/public/images/awards/trophy.png";
+import { urlFor } from "@/lib/sanity";
 import receivingImg from "@/public/images/awards/receiving.png";
-import trophy2Img from "@/public/images/awards/trophy2.png";
 import receiving2Img from "@/public/images/awards/receiving2.png";
+import trophyImg from "@/public/images/awards/trophy.png";
+import trophy2Img from "@/public/images/awards/trophy2.png";
 
 export interface AwardItem {
   id: string;
@@ -11,7 +12,20 @@ export interface AwardItem {
   year: string;
   organization: string;
   image: any;
-  receivingImage: any;
+  receivingImage?: any;
+}
+
+export function mapSanityAward(award: any): AwardItem {
+  return {
+    id: award.slug?.current || award._id,
+    title: award.title,
+    tagline: award.tagline,
+    description: award.description,
+    year: award.year,
+    organization: award.organization,
+    image: award.image ? urlFor(award.image).url() : null,
+    receivingImage: award.receivingImage ? urlFor(award.receivingImage).url() : null,
+  };
 }
 
 export const AWARDS: AwardItem[] = [
@@ -49,7 +63,7 @@ export const AWARDS: AwardItem[] = [
     id: "outstanding-infrastructure",
     title: "Outstanding Preschool Infrastructure",
     tagline: "Awarded for child-friendly, welcoming, and inspiring architecture.",
-    description: "Early Childhood Association India recognized Whizkids Jayamahal for outstanding design. This honor spotlights our clean, airy, bright activity rooms, dedicated sensory zones, safe outdoor playground, and ergonomic layouts customized for early childhood learning.",
+    description: "Early Childhood Association India recognized Whizkids International preschool Jayamahal for outstanding design. This honor spotlights our clean, airy, bright activity rooms, dedicated sensory zones, safe outdoor playground, and ergonomic layouts customized for early childhood learning.",
     year: "2024",
     organization: "Early Childhood Association India",
     image: trophyImg,
@@ -89,7 +103,7 @@ export const AWARDS: AwardItem[] = [
     id: "preschool-leadership",
     title: "Preschool Leadership Award",
     tagline: "Celebrating visionary leadership in early learning operations and pedagogy.",
-    description: "Whizkids Jayamahal received the Preschool Leadership Award for outstanding school management, rigorous caregiver training, and commitment to maintaining early education best practices across all curriculum stages.",
+    description: "Whizkids International Jayamahal received the Preschool Leadership Award for outstanding school management, rigorous caregiver training, and commitment to maintaining early education best practices across all curriculum stages.",
     year: "2025",
     organization: "National School Leaders Summit",
     image: trophyImg,

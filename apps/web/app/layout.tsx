@@ -80,9 +80,6 @@ export default function RootLayout({
       lang="en"
       className={`${nunito.variable} ${dynaPuff.variable} h-full antialiased`}
     >
-      <head>
-        <script src="https://cdn.pagesense.io/js/myrateb/a3eb39187fc749c080c520c21b758f57.js"></script>
-      </head>
       <body className="min-h-full flex flex-col">
         <InquiryModalProvider>
           <Header />

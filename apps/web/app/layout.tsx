@@ -5,6 +5,7 @@ import InquiryModalRoot from "@/components/InquiryModalRoot";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import type { Metadata } from "next";
 import { DynaPuff, Nunito } from "next/font/google";
+import Script from "next/script";
 import React from "react";
 import "./globals.css";
 
@@ -81,6 +82,10 @@ export default function RootLayout({
       className={`${nunito.variable} ${dynaPuff.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <Script
+          src="https://cdn.pagesense.io/js/myrateb/a3eb39187fc749c080c520c21b758f57.js"
+          strategy="afterInteractive"
+        />
         <InquiryModalProvider>
           <Header />
           <main>{children}</main>

@@ -1,13 +1,27 @@
 import BreadCrumb from "@/components/BreadCrumb";
+import CtaSection from "@/components/CtaSection";
+import AnnualSportsDay from "@/components/sports/AnnualSportsDay";
+import SportsIntro from "@/components/sports/SportsIntro";
+import SportsProgramsSection from "@/components/sports/SportsProgramsSection";
 import type { Metadata } from "next";
+import React from "react";
 
 export const metadata: Metadata = {
   title: "Sports",
-  description: "Discover the sports and physical development programs we offer at Whizkids International Preschool Jayamahal.",
-  keywords: ["kids sports", "physical education preschool", "sports for toddlers", "Whizkids sports"],
+  description: "Discover the sports and physical development programs we offer at Whizkids International Preschool Jayamahal — Gymnastics, Taekwondo, Yoga, Football and our Annual Sports Day.",
+  keywords: [
+    "kids sports preschool",
+    "gymnastics for toddlers",
+    "taekwondo kids bangalore",
+    "yoga for preschoolers",
+    "football for kids",
+    "physical education preschool",
+    "Whizkids sports programs",
+    "annual sports day preschool",
+  ],
   openGraph: {
-    title: "Sports | Physical Development at Whizkids",
-    description: "Discover the sports and physical development programs we offer at Whizkids International Preschool Jayamahal.",
+    title: "Sports Programs | Physical Development at Whizkids",
+    description: "From Gymnastics and Taekwondo to Yoga and Football — discover how Whizkids International Preschool nurtures every child's physical potential.",
     url: "https://whizkidsinternational.in/sports",
     siteName: "Whizkids International Preschool",
     images: [
@@ -15,7 +29,7 @@ export const metadata: Metadata = {
         url: "/images/home-page-screenshot.png",
         width: 1200,
         height: 630,
-        alt: "Whizkids International Preschool Jayamahal Sports",
+        alt: "Whizkids International Preschool Jayamahal Sports Programs",
       },
     ],
     locale: "en_IN",
@@ -23,8 +37,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sports | Physical Development at Whizkids",
-    description: "Discover the sports and physical development programs we offer at Whizkids International Preschool Jayamahal.",
+    title: "Sports Programs | Physical Development at Whizkids",
+    description: "From Gymnastics and Taekwondo to Yoga and Football — discover how Whizkids International Preschool nurtures every child's physical potential.",
     images: ["/images/home-page-screenshot.png"],
   },
 };
@@ -32,20 +46,26 @@ export const metadata: Metadata = {
 export default function SportsPage(): React.JSX.Element {
   return (
     <main className="min-h-screen bg-background flex flex-col">
+
+      {/* ── 1. Breadcrumb ── */}
       <BreadCrumb
-        heading={{ main: "Sports" }}
-        description="Discover the sports programs we offer at Whizkids."
-        mainImage="/images/testimonials-hero.jpg"
+        heading={{ main: "Sports &", span: "Physical Development" }}
+        description="From gymnastics to football, yoga to taekwondo — discover how we nurture every child's physical potential through joyful, structured sports programs."
+        mainImage="/images/sports-coach.png"
       />
 
-      <div className="flex-1 flex flex-col items-center justify-center py-32 px-4 text-center">
-        <h2 className="text-4xl md:text-5xl font-display font-bold text-primary mb-4">
-          Coming Soon
-        </h2>
-        <p className="text-lg text-foreground/70 max-w-lg mx-auto">
-          We are currently working hard to bring you our new Sports page. Check back soon for updates!
-        </p>
-      </div>
+      {/* ── 2. Coach / Intro Section ── */}
+      <SportsIntro />
+
+      {/* ── 3–6. Sports Programs: Gymnastics, Taekwondo, Yoga, Football ── */}
+      <SportsProgramsSection />
+
+      {/* ── 7. Annual Sports Day ── */}
+      <AnnualSportsDay />
+
+      {/* ── CTA ── */}
+      <CtaSection />
+
     </main>
   );
 }

@@ -1,13 +1,26 @@
 import BreadCrumb from "@/components/BreadCrumb";
+import CtaSection from "@/components/CtaSection";
+import ActivitiesIntro from "@/components/activities/ActivitiesIntro";
+import FestivalsSection from "@/components/activities/FestivalsSection";
+import FieldTripsSection from "@/components/activities/FieldTripsSection";
 import type { Metadata } from "next";
+import React from "react";
 
 export const metadata: Metadata = {
   title: "Activities",
-  description: "Explore the exciting activities and extracurricular programs we offer at Whizkids International Preschool Jayamahal.",
-  keywords: ["preschool activities", "extracurricular programs", "kids learning activities", "Whizkids activities"],
+  description: "Explore the exciting activities at Whizkids International Preschool Jayamahal — from vibrant festival celebrations to hands-on field trips to supermarkets, hospitals, post offices, police stations and parks.",
+  keywords: [
+    "preschool activities bangalore",
+    "festival celebrations preschool",
+    "field trips for kids",
+    "Whizkids activities",
+    "experiential learning preschool",
+    "kids cultural activities",
+    "preschool field trip supermarket hospital",
+  ],
   openGraph: {
     title: "Activities | Whizkids International Preschool Jayamahal",
-    description: "Explore the exciting activities and extracurricular programs we offer for your child's holistic development.",
+    description: "Festivals, field trips, and enriching experiences that go beyond the classroom — discover how Whizkids makes every day an adventure.",
     url: "https://whizkidsinternational.in/activities",
     siteName: "Whizkids International Preschool",
     images: [
@@ -15,7 +28,7 @@ export const metadata: Metadata = {
         url: "/images/home-page-screenshot.png",
         width: 1200,
         height: 630,
-        alt: "Whizkids International Preschool Jayamahal",
+        alt: "Whizkids International Preschool Jayamahal Activities",
       },
     ],
     locale: "en_IN",
@@ -24,7 +37,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Activities | Whizkids International Preschool Jayamahal",
-    description: "Explore the exciting activities and extracurricular programs we offer for your child's holistic development.",
+    description: "Festivals, field trips, and enriching experiences that go beyond the classroom.",
     images: ["/images/home-page-screenshot.png"],
   },
 };
@@ -32,20 +45,26 @@ export const metadata: Metadata = {
 export default function ActivitiesPage(): React.JSX.Element {
   return (
     <main className="min-h-screen bg-background flex flex-col">
+
+      {/* ── 1. Breadcrumb ── */}
       <BreadCrumb
-        heading={{ main: "Activities" }}
-        description="Explore the exciting activities we offer at Whizkids."
-        mainImage="/images/testimonials-hero.jpg"
+        heading={{ main: "Activities &", span: "Experiences" }}
+        description="From vibrant festival celebrations to real-world field trips — every activity at Whizkids is a purposeful adventure that shapes confident, curious, and well-rounded children."
+        mainImage="/images/activities-hero.png"
       />
 
-      <div className="flex-1 flex flex-col items-center justify-center py-32 px-4 text-center">
-        <h2 className="text-4xl md:text-5xl font-display font-bold text-primary mb-4">
-          Coming Soon
-        </h2>
-        <p className="text-lg text-foreground/70 max-w-lg mx-auto">
-          We are currently working hard to bring you our new Activities page. Check back soon for updates!
-        </p>
-      </div>
+      {/* ── 2. Overview Intro ── */}
+      <ActivitiesIntro />
+
+      {/* ── 3. Festivals Section ── */}
+      <FestivalsSection />
+
+      {/* ── 4. Field Trips Section ── */}
+      <FieldTripsSection />
+
+      {/* ── CTA ── */}
+      <CtaSection />
+
     </main>
   );
 }

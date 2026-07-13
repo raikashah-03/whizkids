@@ -223,10 +223,17 @@ export default function FestivalsSection(): React.JSX.Element {
             className="justify-center!"
             afterHeadingText="🎊"
           />
-          <p className="text-foreground/70 font-medium max-w-2xl mx-auto mt-4 text-base md:text-lg leading-relaxed">
-            At Whizkids, every festival is a learning adventure. We celebrate India's rich cultural tapestry —
-            giving children a joyful, hands-on understanding of traditions, values, and the joy of togetherness.
-          </p>
+          <div className="text-foreground/70 font-medium max-w-3xl mx-auto mt-6 text-base md:text-lg leading-relaxed space-y-4">
+            <p>
+              At Whizkids International Jayamahal, festivals aren’t just events on a calendar; they’re moments children truly feel and remember.
+            </p>
+            <p>
+              It’s the excitement of dressing up, the joy of celebrating together, and the little stories behind each tradition that slowly start to make sense to them. We keep it simple, hands-on, and meaningful so children don’t just watch — they take part.
+            </p>
+            <p>
+              Through these celebrations, they begin to understand togetherness, culture, and shared joy in the most natural way.
+            </p>
+          </div>
         </div>
 
         {/* ── Festival Cards ── */}

@@ -245,7 +245,7 @@ export default function BreadCrumb({
 
             {/* Description */}
             {description && (
-              <p className="max-w-md text-sm leading-relaxed text-foreground/70 md:text-base">
+              <p className="max-w-md text-sm leading-relaxed text-foreground/70 md:text-base whitespace-pre-line">
                 {description}
               </p>
             )}

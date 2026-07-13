@@ -16,6 +16,8 @@ const highlights = [
   { emoji: "🚌", label: "Field Trips", sub: "Real-world adventures", href: "#field-trips", bg: "bg-[#F1F8EB]", color: "text-green-strong" },
   { emoji: "🎨", label: "Arts & Crafts", sub: "Creative expression", href: "#", bg: "bg-[#EBDCFF]", color: "text-lavender-strong" },
   { emoji: "🎵", label: "Music & Dance", sub: "Rhythm & movement", href: "#", bg: "bg-[#E4F3F7]", color: "text-skyblue-strong" },
+  { emoji: "💦", label: "Water Play", sub: "Splash & sensory fun", href: "#", bg: "bg-[#E4F3F7]", color: "text-skyblue-strong" },
+  { emoji: "🏺", label: "Pottery", sub: "Clay modeling & crafts", href: "#", bg: "bg-[#FFF6F0]", color: "text-peach-strong" },
 ];
 
 export default function ActivitiesIntro(): React.JSX.Element {
@@ -75,15 +77,18 @@ export default function ActivitiesIntro(): React.JSX.Element {
               className="justify-start!"
             />
 
-            <p className="text-foreground/70 font-medium leading-relaxed text-base md:text-lg max-w-xl">
-              At Whizkids, activities aren't extras — they're essential. Every festival we celebrate, every
-              field trip we take, and every creative session we run is a purposeful experience designed to
-              build a well-rounded, confident, and curious child.
-            </p>
-            <p className="text-foreground/70 font-medium leading-relaxed text-base max-w-xl">
-              Children learn best when they're having fun. Our activity calendar ensures that every month
-              brings something new, exciting, and deeply meaningful to their growing minds.
-            </p>
+            <div className="text-foreground/70 font-medium leading-relaxed text-sm md:text-base max-w-xl space-y-4">
+              <p>
+                At Whizkids International Jayamahal, this is the part children talk about when they get home.
+                The festival they celebrated, the place they visited, and the small things they tried for the first time. These aren’t “extra” activities for us; this is where real learning happens.
+              </p>
+              <p>
+                We don’t rush through them or do them just for the sake of it. We slow down, let children take part, ask questions, enjoy the moment, and make sense of it in their own way.
+              </p>
+              <p>
+                Because when a child experiences something for themselves, it stays. And that’s what really builds confidence, curiosity, and a genuine love for learning.
+              </p>
+            </div>
 
             {/* Highlights grid */}
             <div className="grid grid-cols-2 gap-3 mt-2">

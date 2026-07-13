@@ -6,7 +6,7 @@
  */
 
 import summerCampImg from "@/public/images/programs/summercamp.png";
-import { Music, Palette, Sun } from "lucide-react";
+import { Music, Palette, Sun, Droplets, Sparkles, Shield, Paintbrush } from "lucide-react";
 import Image from "next/image";
 import Heading from "../Headding";
 
@@ -14,6 +14,10 @@ const activities = [
   { icon: Palette, title: "Creative Arts" },
   { icon: Music, title: "Music & Fun" },
   { icon: Sun, title: "Outdoor Fun" },
+  { icon: Droplets, title: "Water Play" },
+  { icon: Sparkles, title: "Pottery" },
+  { icon: Shield, title: "Taekwondo" },
+  { icon: Paintbrush, title: "Painting" },
 ];
 
 export default function SummerCampSection(): React.JSX.Element {
@@ -109,9 +113,7 @@ export default function SummerCampSection(): React.JSX.Element {
                   in a safe and supportive environment.
                 </p>
                 <p className="mid-text leading-relaxed">
-                  From messy art projects and rhythmic music workshops to hands-on
-                  science experiments and outdoor nature walks, our weekly themed
-                  activities are designed to spark curiosity and keep bodies moving.
+                  From messy art projects, painting, and pottery to water play, music workshops, taekwondo, and outdoor nature walks, our weekly themed activities are designed to spark curiosity and keep bodies moving.
                 </p>
               </div>
 

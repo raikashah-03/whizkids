@@ -1,13 +1,13 @@
 "use client";
 
 import Heading from "@/components/Headding";
+import TopBottomShapeSection from "@/components/ui/top-bottom-shape-section";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { CalendarHeart, Medal, Sparkles, Trophy, Users } from "lucide-react";
 import Image from "next/image";
 import React, { useRef } from "react";
-import TopBottomShapeSection from "@/components/ui/top-bottom-shape-section";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -173,15 +173,23 @@ export default function AnnualSportsDay(): React.JSX.Element {
             className="justify-center!"
           />
 
-          <p className="text-foreground/70 font-medium max-w-2xl mx-auto mt-4 text-base md:text-lg leading-relaxed">
-            Every year, Whizkids hosts a spectacular <strong>Annual Sports Day</strong> — a day filled with
-            excitement, friendly competition, and proud moments for every child. From mini marathons to
-            gymnastic showcases, it's a true celebration of physical growth, team spirit, and the joy of sport.
-          </p>
-          <p className="text-foreground/60 font-medium max-w-xl mx-auto mt-3 text-sm md:text-base">
-            Parents are invited to cheer, every participant receives recognition, and memories are made that last a lifetime.
-            It's not just a sports day — it's the highlight of the Whizkids calendar. 🎉
-          </p>
+          <div className="text-foreground/70 font-medium max-w-3xl mx-auto mt-6 text-sm md:text-base leading-relaxed space-y-4">
+            <p>
+              Annual Sports Day at Whizkids is one of the most awaited days of the year, full of energy, excitement, and those little moments parents never forget.
+            </p>
+            <p>
+              It’s not about competition in the traditional sense. It’s about children stepping out, trying, participating, and feeling proud of what they can do. From simple races and obstacle runs to group games and movement showcases, every activity is designed so each child gets their moment.
+            </p>
+            <p>
+              We also put real thought into how we host it. We conduct our Annual Sports Day at a larger, more organised scale so children get used to structured events, bigger spaces, and performing in front of an audience. It helps them build the confidence and comfort they’ll need as they move on to more formal schools later on.
+            </p>
+            <p>
+              You’ll see confidence building in real time, a hesitant child stepping forward, participating, and finishing with a smile because they did it. You’ll see teamwork, encouragement, and genuine joy on the field.
+            </p>
+            <p>
+              With parents cheering, teachers guiding, and every child being recognised, it becomes more than just a sports day. It becomes a celebration of growth, effort, and self-belief — the kind of experience that truly prepares them for what’s ahead, while giving them a memory they’ll carry with them for years.
+            </p>
+          </div>
         </div>
 
         {/* ── Main Image ── */}

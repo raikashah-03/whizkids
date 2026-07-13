@@ -49,7 +49,11 @@ export default function ActivitiesPage(): React.JSX.Element {
       {/* ── 1. Breadcrumb ── */}
       <BreadCrumb
         heading={{ main: "Activities &", span: "Experiences" }}
-        description="From vibrant festival celebrations to real-world field trips — every activity at Whizkids is a purposeful adventure that shapes confident, curious, and well-rounded children."
+        description={`This is where childhood really comes alive.
+
+Not just classroom moments, but the little experiences children carry with them — celebrating together, stepping out into the real world, trying new things, and asking their own questions along the way.
+
+These everyday moments are what help children open up, feel more confident, and slowly understand the world around them in their own way.`}
         mainImage="/images/activities-hero.png"
       />
 

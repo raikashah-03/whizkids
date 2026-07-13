@@ -28,7 +28,7 @@ interface SportProgram {
   headingMain: string;
   headingSpan: string;
   tagline: string;
-  description: string;
+  description: string[];
   benefits: string[];
   images: SportImage[];
   collageVariant: CollageVariant;
@@ -49,8 +49,12 @@ const sports: SportProgram[] = [
     headingMain: "Building Balance &",
     headingSpan: "Gymnastics",
     tagline: "Flexibility, Coordination & Confidence",
-    description:
-      "Our gymnastics program introduces children to the joy of movement through age-appropriate tumbling, balancing, and stretching. Under expert guidance, little ones learn body awareness, coordination, and spatial reasoning — all wrapped in loads of fun!",
+    description: [
+      "Our gymnastics program is designed to support early physical development in a structured, age-appropriate way.",
+      "Through guided movements like stretching, balancing, and basic tumbling, children develop core strength, coordination, and spatial awareness, all of which are critical at this stage of growth. These activities also help improve posture, control, and overall body awareness.",
+      "The approach is gentle and progressive, allowing each child to build confidence in their physical abilities without pressure.",
+      "Over time, you’ll notice better balance, more controlled movement, and a growing sense of confidence in how they use their body.",
+    ],
     benefits: [
       "Develops balance & motor coordination",
       "Builds core strength and flexibility",
@@ -76,8 +80,12 @@ const sports: SportProgram[] = [
     headingMain: "Focus, Discipline &",
     headingSpan: "Taekwondo",
     tagline: "Respect, Focus & Inner Strength",
-    description:
-      "Taekwondo at Whizkids is more than kicks and punches — it's about respect, focus, and self-belief. Children learn the art form through playful drills and structured sequences, building not just physical strength but emotional discipline and a calm, confident mindset.",
+    description: [
+      "Our taekwondo sessions focus on building awareness, control, and a quiet sense of confidence in children.",
+      "At this age, learning self-defence isn’t about aggression; it’s about helping children understand personal boundaries, stay alert, and feel secure in their own space. Through simple, structured movements, they begin to develop coordination, balance, and the ability to respond calmly.",
+      "Alongside the physical aspect, there’s a strong focus on discipline, listening, and respect, which naturally reflects in their behaviour.",
+      "You’ll start to see a child who is more aware of their surroundings, more in control of their actions, and able to respond with calm confidence when it matters.",
+    ],
     benefits: [
       "Teaches respect and self-discipline",
       "Sharpens focus and concentration",
@@ -103,8 +111,11 @@ const sports: SportProgram[] = [
     headingMain: "Calm, Breathe &",
     headingSpan: "Yoga",
     tagline: "Mindfulness, Balance & Inner Peace",
-    description:
-      "Our yoga sessions are a gentle adventure for tiny bodies and curious minds. Children explore fun animal poses, breathing exercises, and relaxation techniques. Yoga nurtures emotional wellbeing, improves flexibility, and gives children tools to manage energy and emotions with grace.",
+    description: [
+      "Our yoga sessions give children a calm, steady space in their day, something they really need at this age.",
+      "Through simple poses, gentle stretches, and basic breathing, they start to build flexibility, balance, and body awareness. Just as importantly, they learn how to slow down, settle themselves, and manage their energy.",
+      "It’s not about doing poses perfectly. It’s about helping children feel more in control of their bodies and a little more at ease within themselves.",
+    ],
     benefits: [
       "Improves flexibility and balance",
       "Teaches mindfulness and breathing",
@@ -131,8 +142,11 @@ const sports: SportProgram[] = [
     headingMain: "Teamwork, Energy &",
     headingSpan: "Football",
     tagline: "Agility, Teamwork & Pure Fun",
-    description:
-      "Football is every child's dream and at Whizkids, we make it come alive! Kids learn the basics of dribbling, passing, and scoring through fun drills and mini-matches. Beyond the game, they develop teamwork, communication, and an energetic love for outdoor play.",
+    description: [
+      "Football at this age isn’t really about scoring goals yet, it’s about learning how to move, react, and work with others.",
+      "Through simple drills and small-sided play, children begin to develop coordination, balance, and spatial awareness. They learn how to take turns, pass, communicate, and be part of a team, skills that go far beyond the field.",
+      "It’s active, structured play that builds stamina, focus, and confidence, while keeping their natural love for running and playing fully alive.",
+    ],
     benefits: [
       "Develops agility and running speed",
       "Builds teamwork and communication",
@@ -381,9 +395,11 @@ function SportCard({ sport, index }: { sport: SportProgram; index: number }) {
           {sport.tagline}
         </p>
 
-        <p className="text-foreground/70 font-medium leading-relaxed text-base md:text-lg max-w-lg">
-          {sport.description}
-        </p>
+        <div className="text-foreground/70 font-medium leading-relaxed text-sm md:text-base max-w-lg space-y-3">
+          {sport.description.map((paragraph, i) => (
+            <p key={i}>{paragraph}</p>
+          ))}
+        </div>
 
         {/* Benefits */}
         <div className="flex flex-col gap-2.5 mt-1">
@@ -444,8 +460,7 @@ export default function SportsProgramsSection(): React.JSX.Element {
             beforeIcon="/icons/star.png"
           />
           <p className="text-foreground/70 font-medium max-w-2xl mx-auto mt-4">
-            Every sport at Whizkids is designed to be age-appropriate, joyful, and developmentally enriching —
-            giving children the physical skills and emotional resilience to thrive.
+            Every sport at Whizkids is designed to be age-appropriate, joyful, and developmentally enriching, giving children the physical skills and emotional resilience to thrive.
           </p>
         </div>
 

@@ -4,7 +4,7 @@ import Heading from "@/components/Headding";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Award, Heart, Users, Zap } from "lucide-react";
+import { Award, Medal, Star, Trophy } from "lucide-react";
 import Image from "next/image";
 import React, { useRef } from "react";
 
@@ -13,10 +13,10 @@ if (typeof window !== "undefined") {
 }
 
 const stats = [
-  { value: "5+", label: "Sports", icon: Zap, bg: "bg-[#E4F3F7]", color: "text-skyblue-strong" },
-  { value: "All", label: "Age Groups", icon: Users, bg: "bg-[#EBDCFF]", color: "text-lavender-strong" },
-  { value: "Weekly", label: "Sessions", icon: Heart, bg: "bg-[#FDE9E9]", color: "text-pink-strong" },
-  { value: "Certified", label: "Coaches", icon: Award, bg: "bg-[#F1F8EB]", color: "text-green-strong" },
+  { value: "14+", label: "Years Exp.", icon: Star, bg: "bg-[#E4F3F7]", color: "text-skyblue-strong" },
+  { value: "National", label: "Athlete", icon: Trophy, bg: "bg-[#EBDCFF]", color: "text-lavender-strong" },
+  { value: "Silver", label: "Judo Medalist", icon: Medal, bg: "bg-[#FDE9E9]", color: "text-pink-strong" },
+  { value: "State", label: "Youth Award", icon: Award, bg: "bg-[#F1F8EB]", color: "text-green-strong" },
 ];
 
 export default function SportsIntro(): React.JSX.Element {
@@ -93,27 +93,34 @@ export default function SportsIntro(): React.JSX.Element {
           <div ref={contentRef} className="flex-1 flex flex-col gap-6">
             {/* Label pill */}
             <div className="w-fit px-4 py-1.5 bg-[#E4F3F7] rounded-full text-skyblue-strong font-bold text-xs tracking-widest uppercase shadow-sm">
-              Meet Our Team
+              Meet Our Coach
             </div>
 
             <Heading
-              headingText="Led by a Passionate"
-              spanText="Sports Coach"
+              headingText="Led by a Dedicated Coach with"
+              spanText="Real Competitive Experience"
               className="justify-start!"
             />
 
-            <p className="text-foreground/70 font-medium leading-relaxed text-base md:text-lg max-w-xl">
-              At Whizkids, our dedicated sports coach brings energy, warmth, and expertise to every session.
-              With a background in child fitness and development, our coach tailors every activity to be
-              age-appropriate, safe, and above all — fun! Children don't just play; they build confidence,
-              discipline, and a lifelong love for being active.
-            </p>
+            <div className="flex flex-col gap-4 text-foreground/70 font-medium leading-relaxed text-sm md:text-base max-w-xl">
+              <p>
+                At Whizkids, our sports program is led by our dedicated coach, Rohit Raghu Gowda — someone who brings not just qualifications, but lived experience as a competitive athlete. As a national-level wrestler, weightlifter, and tug of war player, along with being a division-level judo silver medalist, he understands discipline, consistency, and what strong physical foundations really look like.
+              </p>
+              <p>
+                What sets him apart is how he translates that experience for young children. Sessions are thoughtfully adapted to suit their age and energy, structured enough to build strength and coordination, yet gentle and encouraging so children feel safe, confident, and motivated to participate.
+              </p>
+              <p>
+                His focus goes beyond just activity. Children slowly build stamina, balance, and control, while also learning focus, patience, and self-belief – all in a way that feels natural to them.
+              </p>
+            </div>
 
-            <div className="flex flex-col gap-2 mt-2">
+            <div className="flex flex-col gap-2 mt-4">
               {[
-                "Certified in Early Childhood Physical Education",
-                "Trained in Gymnastics, Yoga & Martial Arts",
-                "Specialised in age-appropriate motor skill development",
+                "National-level athlete in wrestling, weightlifting & tug of war",
+                "Division-level judo silver medalist",
+                "State Youth Award recipient",
+                "Co-founder of Little Stags Pvt. Ltd.",
+                "Special focus on early physical development, coordination & discipline",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
                   <span className="w-5 h-5 rounded-full bg-[#E4F3F7] flex items-center justify-center shrink-0">
@@ -126,33 +133,19 @@ export default function SportsIntro(): React.JSX.Element {
               ))}
             </div>
 
-            {/* Stats grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-4">
-              {stats.map((stat, i) => (
-                <div
-                  key={i}
-                  ref={(el) => { statsRef.current[i] = el; }}
-                  className={`${stat.bg} rounded-2xl p-4 flex flex-col items-center text-center gap-1 shadow-sm`}
-                >
-                  <stat.icon className={`w-5 h-5 ${stat.color} mb-1`} />
-                  <span className={`text-xl font-black font-display ${stat.color}`}>{stat.value}</span>
-                  <span className="text-xs font-bold text-foreground/60 uppercase tracking-wide">{stat.label}</span>
-                </div>
-              ))}
-            </div>
           </div>
 
-          {/* ── Right: Coach Image ── */}
-          <div ref={imageRef} className="flex-shrink-0 w-full lg:w-[420px]">
-            <div className="relative">
+          {/* ── Right: Coach Image & Stats ── */}
+          <div className="flex-shrink-0 w-full lg:w-[400px] flex flex-col gap-8 mt-8 lg:mt-0">
+            <div ref={imageRef} className="relative">
               {/* Decorative ring */}
               <div className="absolute -inset-4 rounded-[3rem] border-2 border-dashed border-[#29BFDF]/30 animate-spin-slow pointer-events-none" />
 
               {/* Main image frame */}
-              <div className="relative rounded-[2.5rem] overflow-hidden aspect-[4/5] shadow-[0_20px_60px_rgba(0,0,0,0.12)]">
+              <div className="relative rounded-[2.5rem] overflow-hidden aspect-[6/7] shadow-[0_20px_60px_rgba(0,0,0,0.12)]">
                 <Image
                   src="/images/sports-coach.png"
-                  alt="Whizkids Sports Coach"
+                  alt="Rohit Raghu Gowda - Whizkids Sports Coach"
                   fill
                   className="object-cover object-center"
                   sizes="(max-width: 1024px) 100vw, 420px"
@@ -166,8 +159,8 @@ export default function SportsIntro(): React.JSX.Element {
                       <Award className="w-5 h-5 text-skyblue-strong" />
                     </div>
                     <div>
-                      <p className="font-black font-display text-foreground text-sm">Sports Coach</p>
-                      <p className="text-xs text-foreground/60 font-medium">Certified Physical Educator</p>
+                      <p className="font-black font-display text-foreground text-sm">Rohit Raghu Gowda</p>
+                      <p className="text-xs text-foreground/60 font-medium">Head Sports Coach</p>
                     </div>
                   </div>
                 </div>
@@ -178,6 +171,21 @@ export default function SportsIntro(): React.JSX.Element {
                 <p className="font-black font-display text-sm">14+ Years</p>
                 <p className="text-xs opacity-90">of Excellence</p>
               </div>
+            </div>
+
+            {/* Stats grid */}
+            <div className="grid grid-cols-2 gap-4">
+              {stats.map((stat, i) => (
+                <div
+                  key={i}
+                  ref={(el) => { statsRef.current[i] = el; }}
+                  className={`${stat.bg} rounded-2xl p-4 flex flex-col items-center text-center gap-1 shadow-sm`}
+                >
+                  <stat.icon className={`w-5 h-5 ${stat.color} mb-1`} />
+                  <span className={`text-xl font-black font-display ${stat.color}`}>{stat.value}</span>
+                  <span className="text-xs font-bold text-foreground/60 uppercase tracking-wide">{stat.label}</span>
+                </div>
+              ))}
             </div>
           </div>
 

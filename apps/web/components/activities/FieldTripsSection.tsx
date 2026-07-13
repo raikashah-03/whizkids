@@ -24,7 +24,7 @@ const trips = [
     headingSpan: "Supermarket",
     tagline: "Money, Math & Real-World Choices",
     description:
-      "Children visit a real supermarket and discover how the world of buying and selling works — from recognising fruit and vegetables to understanding that things have prices. They practise counting, sorting, and making simple choices while exploring the store.",
+      "This is one of those trips children instantly connect with. They walk through the store, point at things they recognise, and slowly start noticing little details like “this costs money”, “we have to choose”, “we can’t take everything”. They pick, compare, count a little… and without even realising it, they’re learning how everyday things work. Because it feels so real to them, it just clicks.",
     learnings: [
       "Understand buying & selling concepts",
       "Recognise everyday food items",
@@ -72,7 +72,7 @@ const trips = [
     headingSpan: "Post Office",
     tagline: "Communication, Letters & Stamps",
     description:
-      "In an age of instant messaging, the post office is a magical world of letters, stamps, and parcels. Children write their own simple letters, put them in envelopes, and watch the postal journey begin — learning communication, patience, and how the world stays connected.",
+      "For most children, posting a letter is something they’ve never really seen. So we keep it simple. They write a small note, put it in an envelope, add a stamp, and drop it into the post box. That’s it. But in that small moment, they begin to understand that messages don’t always arrive instantly; sometimes they travel. And that simple idea stays with them.",
     learnings: [
       "Understand letter writing & communication",
       "Learn about stamps and postal services",
@@ -96,7 +96,7 @@ const trips = [
     headingSpan: "Police Station",
     tagline: "Safety, Rules & Community Heroes",
     description:
-      "Children get to meet real police officers who keep our communities safe. They see how a police station works, learn about rules, explore a police vehicle, and understand why law and order matters — building a healthy, respectful attitude towards authority.",
+      "Children are naturally curious about police and what they do. So we take them to see it up close. They meet officers, look around the station, and get a simple idea of how things work. They might see a police vehicle, ask a few questions, and just take it all in. It helps them understand that police are there to help and keep people safe, and that idea feels much clearer when they’ve seen it for themselves.",
     learnings: [
       "Understand community safety roles",
       "Build healthy respect for authority",
@@ -120,7 +120,7 @@ const trips = [
     headingSpan: "Park",
     tagline: "Nature, Play & Exploration",
     description:
-      "The park is a treasure trove of sensory experiences. Children explore nature — observing insects, collecting leaves and pebbles, playing freely on equipment, and simply running in open green space. It nurtures their physical development, curiosity, and love for the outdoors.",
+      "Some of the best learning is this simple. Children run freely, climb, pick up leaves, watch insects, and just spend time outdoors. They move at their own pace, following whatever catches their attention. It’s simple, but it matters; they move more, observe more, and slowly build a natural comfort with the world around them.",
     learnings: [
       "Connect with nature and outdoors",
       "Develop gross motor skills",
@@ -345,10 +345,8 @@ export default function FieldTripsSection(): React.JSX.Element {
             className="justify-center!"
             beforeIcon="/icons/bus.png"
           />
-          <p className="text-foreground/70 font-medium max-w-2xl mx-auto mt-4 text-base md:text-lg leading-relaxed">
-            At Whizkids, learning doesn't stop at the classroom door. Our carefully planned <strong>field trips</strong> take
-            children into the real world — turning everyday places into extraordinary classrooms. Every visit is
-            a hands-on adventure that builds knowledge, confidence, and curiosity.
+          <p className="text-foreground/70 font-medium max-w-3xl mx-auto mt-4 text-base md:text-lg leading-relaxed">
+            At Whizkids International Jayamahal, we don’t keep learning limited to four walls. Children step out, see real places, and make sense of things as they go, whether it’s a supermarket, a park, or a community space. They notice, ask, and connect things in their own simple way. These aren’t big, overwhelming outings. Just simple, real experiences that help children feel more aware, more confident, and a little more comfortable in the world around them.
           </p>
         </div>
 

@@ -2,6 +2,7 @@ import BreadCrumb from "@/components/BreadCrumb";
 import CtaSection from "@/components/CtaSection";
 import AnnualSportsDay from "@/components/sports/AnnualSportsDay";
 import SportsIntro from "@/components/sports/SportsIntro";
+import SportsOverview from "@/components/sports/SportsOverview";
 import SportsProgramsSection from "@/components/sports/SportsProgramsSection";
 import type { Metadata } from "next";
 import React from "react";
@@ -54,13 +55,16 @@ export default function SportsPage(): React.JSX.Element {
         mainImage="/images/sports-coach.png"
       />
 
-      {/* ── 2. Coach / Intro Section ── */}
+      {/* ── 2. Overview Section ── */}
+      <SportsOverview />
+
+      {/* ── 3. Coach / Intro Section ── */}
       <SportsIntro />
 
-      {/* ── 3–6. Sports Programs: Gymnastics, Taekwondo, Yoga, Football ── */}
+      {/* ── 4–7. Sports Programs: Gymnastics, Taekwondo, Yoga, Football ── */}
       <SportsProgramsSection />
 
-      {/* ── 7. Annual Sports Day ── */}
+      {/* ── 8. Annual Sports Day ── */}
       <AnnualSportsDay />
 
       {/* ── CTA ── */}

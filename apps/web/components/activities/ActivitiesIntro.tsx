@@ -58,6 +58,7 @@ export default function ActivitiesIntro(): React.JSX.Element {
       <div className="absolute top-12 left-[8%] w-14 h-14 opacity-50 animate-float pointer-events-none hidden lg:block">
         <Image src="/icons/rainbow.png" alt="" fill className="object-contain" />
       </div>
+
       <div className="absolute bottom-16 right-[10%] w-12 h-12 opacity-40 animate-bob pointer-events-none hidden lg:block">
         <Image src="/icons/bee.png" alt="" fill className="object-contain" />
       </div>

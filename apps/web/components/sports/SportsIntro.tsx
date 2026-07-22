@@ -104,13 +104,13 @@ export default function SportsIntro(): React.JSX.Element {
 
             <div className="flex flex-col gap-4 text-foreground/70 font-medium leading-relaxed text-sm md:text-base max-w-xl">
               <p>
-                At Whizkids, our sports program is led by our dedicated coach, Rohit Raghu Gowda — someone who brings not just qualifications, but lived experience as a competitive athlete. As a national-level wrestler, weightlifter, and tug of war player, along with being a division-level judo silver medalist, he understands discipline, consistency, and what strong physical foundations really look like.
+                At Whizkids, our sports program is guided by our dedicated coach, Rohit Raghu Gowda — a national-level athlete who brings real experience into every session.
               </p>
               <p>
-                What sets him apart is how he translates that experience for young children. Sessions are thoughtfully adapted to suit their age and energy, structured enough to build strength and coordination, yet gentle and encouraging so children feel safe, confident, and motivated to participate.
+                What makes the difference is how he works with young children. Activities are adapted to their age and energy, giving them the right balance of structure and comfort so they feel confident to take part.
               </p>
               <p>
-                His focus goes beyond just activity. Children slowly build stamina, balance, and control, while also learning focus, patience, and self-belief – all in a way that feels natural to them.
+                Over time, children build strength, balance, and control, while also learning focus and self-belief, in a way that feels natural, not forced.
               </p>
             </div>
 
@@ -142,7 +142,7 @@ export default function SportsIntro(): React.JSX.Element {
               <div className="absolute -inset-4 rounded-[3rem] border-2 border-dashed border-[#29BFDF]/30 animate-spin-slow pointer-events-none" />
 
               {/* Main image frame */}
-              <div className="relative rounded-[2.5rem] overflow-hidden aspect-[6/7] shadow-[0_20px_60px_rgba(0,0,0,0.12)]">
+              <div className="relative rounded-[2.5rem] overflow-hidden aspect-[5/4] shadow-[0_20px_60px_rgba(0,0,0,0.12)]">
                 <Image
                   src="/images/sports-coach.png"
                   alt="Rohit Raghu Gowda - Whizkids Sports Coach"

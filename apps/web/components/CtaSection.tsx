@@ -25,7 +25,7 @@ export default function CtaSection(): React.JSX.Element {
             </p>
 
             <Link
-              href="/contact"
+              href="/contact#contact-form"
               className="inline-flex self-start items-center gap-3 px-8 py-3.5 rounded-full bg-[#FF8A66] text-white font-bold text-base hover:bg-[#FF8A66]/90 hover:-translate-y-0.5 transition-all duration-300 shadow-md group"
             >
               Contact Us Now

@@ -73,7 +73,7 @@ const BlogSection = async (): Promise<React.JSX.Element> => {
         <div className="mt-16 text-center">
           <OutlineButton
             text="Explore All Stories"
-            href="/blog"
+            href="/blogs"
           />
         </div>
       </div>

@@ -43,7 +43,7 @@ interface AddressData {
 export const addressData: AddressData = {
   address: "12/2, 1st main, Nandi Durga Rd, Jayamahal, Bengaluru, Karnataka 560046",
   phone: "+91 9876543210",
-  email: "info@jayamahal.com",
+  email: "whizkidsjayamahal@gmail.com",
   icons: {
     address: MapPin,
     phone: Phone,
@@ -84,10 +84,10 @@ export const quickLinks = [
 ]
 
 export const programsData = [
-  { title: 'Playgroup', link: '/programs/playgroup' },
-  { title: 'Nursery', link: '/programs/nursery' },
-  { title: 'Jr KG', link: '/programs/jr-kg' },
-  { title: 'Sr KG', link: '/programs/sr-kg' },
-  { title: 'Daycare', link: '/programs/daycare' },
-  { title: 'Summer Camp', link: '/programs/summer-camp' }
+  { title: 'Playgroup', link: '/programs#playgroup' },
+  { title: 'Nursery', link: '/programs#nursery' },
+  { title: 'Jr KG', link: '/programs#jr-kg' },
+  { title: 'Sr KG', link: '/programs#sr-kg' },
+  { title: 'Daycare', link: '/programs#daycare' },
+  { title: 'Summer Camp', link: '/programs#summer-camp' }
 ]

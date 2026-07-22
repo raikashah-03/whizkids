@@ -175,19 +175,13 @@ export default function AnnualSportsDay(): React.JSX.Element {
 
           <div className="text-foreground/70 font-medium max-w-3xl mx-auto mt-6 text-sm md:text-base leading-relaxed space-y-4">
             <p>
-              Annual Sports Day at Whizkids is one of the most awaited days of the year, full of energy, excitement, and those little moments parents never forget.
+              Sports Day is one of those days that just feels special.
             </p>
             <p>
-              It’s not about competition in the traditional sense. It’s about children stepping out, trying, participating, and feeling proud of what they can do. From simple races and obstacle runs to group games and movement showcases, every activity is designed so each child gets their moment.
+              It’s not about who comes first. It’s about children stepping in, giving it a try, and feeling good about it. Simple races, fun games, a bit of excitement — every child gets their turn. For many of them, it’s their first time being in a bigger space, with people watching. There’s a little hesitation… and then they go for it.
             </p>
             <p>
-              We also put real thought into how we host it. We conduct our Annual Sports Day at a larger, more organised scale so children get used to structured events, bigger spaces, and performing in front of an audience. It helps them build the confidence and comfort they’ll need as they move on to more formal schools later on.
-            </p>
-            <p>
-              You’ll see confidence building in real time, a hesitant child stepping forward, participating, and finishing with a smile because they did it. You’ll see teamwork, encouragement, and genuine joy on the field.
-            </p>
-            <p>
-              With parents cheering, teachers guiding, and every child being recognised, it becomes more than just a sports day. It becomes a celebration of growth, effort, and self-belief — the kind of experience that truly prepares them for what’s ahead, while giving them a memory they’ll carry with them for years.
+              You can actually see the change, that moment when they finish and look around, a little surprised, a little proud. With everyone cheering them on, it becomes more than just an event. It’s a small but important step in their confidence.
             </p>
           </div>
         </div>

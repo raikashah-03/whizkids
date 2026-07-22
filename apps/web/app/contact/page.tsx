@@ -60,7 +60,7 @@ const contactPage = (): React.JSX.Element => {
             <div className="md:-mt-[50px]">
               <ContactInfo />
             </div>
-            <div className="md:mt-[40px]">
+            <div id="contact-form" className="scroll-mt-28 md:mt-[40px]">
               <ContactForm />
             </div>
           </div>

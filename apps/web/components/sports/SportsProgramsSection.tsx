@@ -50,10 +50,7 @@ const sports: SportProgram[] = [
     headingSpan: "Gymnastics",
     tagline: "Flexibility, Coordination & Confidence",
     description: [
-      "Our gymnastics program is designed to support early physical development in a structured, age-appropriate way.",
-      "Through guided movements like stretching, balancing, and basic tumbling, children develop core strength, coordination, and spatial awareness, all of which are critical at this stage of growth. These activities also help improve posture, control, and overall body awareness.",
-      "The approach is gentle and progressive, allowing each child to build confidence in their physical abilities without pressure.",
-      "Over time, you’ll notice better balance, more controlled movement, and a growing sense of confidence in how they use their body.",
+      "Our gymnastics program helps children get comfortable with their bodies in a simple, natural way. They stretch, balance, and try basic movements — slowly building strength and coordination as they go. Nothing rushed, nothing forced. Over time, you’ll notice it yourself: better balance, more control, and a quiet confidence in the way they move.",
     ],
     benefits: [
       "Develops balance & motor coordination",
@@ -81,10 +78,8 @@ const sports: SportProgram[] = [
     headingSpan: "Taekwondo",
     tagline: "Respect, Focus & Inner Strength",
     description: [
-      "Our taekwondo sessions focus on building awareness, control, and a quiet sense of confidence in children.",
-      "At this age, learning self-defence isn’t about aggression; it’s about helping children understand personal boundaries, stay alert, and feel secure in their own space. Through simple, structured movements, they begin to develop coordination, balance, and the ability to respond calmly.",
-      "Alongside the physical aspect, there’s a strong focus on discipline, listening, and respect, which naturally reflects in their behaviour.",
-      "You’ll start to see a child who is more aware of their surroundings, more in control of their actions, and able to respond with calm confidence when it matters.",
+      "Our taekwondo sessions help children feel more aware, in control, and quietly confident.",
+      "It’s not about aggression — it’s about understanding personal space, staying alert, and responding calmly. Along the way, they build coordination, discipline, and respect in a way that naturally shows in how they behave.",
     ],
     benefits: [
       "Teaches respect and self-discipline",
@@ -112,9 +107,7 @@ const sports: SportProgram[] = [
     headingSpan: "Yoga",
     tagline: "Mindfulness, Balance & Inner Peace",
     description: [
-      "Our yoga sessions give children a calm, steady space in their day, something they really need at this age.",
-      "Through simple poses, gentle stretches, and basic breathing, they start to build flexibility, balance, and body awareness. Just as importantly, they learn how to slow down, settle themselves, and manage their energy.",
-      "It’s not about doing poses perfectly. It’s about helping children feel more in control of their bodies and a little more at ease within themselves.",
+      "Our yoga sessions give children a gentle break in their day. They stretch, move, and try simple breathing at their own pace. No pressure, no expectations. It helps them slow down, feel a bit more settled, and just be more at ease in themselves.",
     ],
     benefits: [
       "Improves flexibility and balance",
@@ -143,9 +136,7 @@ const sports: SportProgram[] = [
     headingSpan: "Football",
     tagline: "Agility, Teamwork & Pure Fun",
     description: [
-      "Football at this age isn’t really about scoring goals yet, it’s about learning how to move, react, and work with others.",
-      "Through simple drills and small-sided play, children begin to develop coordination, balance, and spatial awareness. They learn how to take turns, pass, communicate, and be part of a team, skills that go far beyond the field.",
-      "It’s active, structured play that builds stamina, focus, and confidence, while keeping their natural love for running and playing fully alive.",
+      "At this age, football is less about goals and more about just playing. Children run, kick, and figure things out as they go. Through simple games, they start building balance, coordination, and a sense of space. They also learn to take turns, pass, and play together — all while doing what they already love: moving and having fun.",
     ],
     benefits: [
       "Develops agility and running speed",

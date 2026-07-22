@@ -25,7 +25,7 @@ export default function NotFoundPage(): React.JSX.Element {
             </Link>
 
             <Link
-              href="/contact"
+              href="/contact#contact-form"
               className="bg-lavender-strong/90 hover:bg-lavender px-5 py-2 rounded-full"
             >
               Enquire

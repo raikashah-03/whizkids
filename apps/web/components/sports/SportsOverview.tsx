@@ -60,30 +60,13 @@ export default function SportsOverview(): React.JSX.Element {
 
           <div className="text-foreground/75 font-medium leading-relaxed text-sm md:text-base max-w-2xl mx-auto space-y-5">
             <p>
-              We take physical development seriously because at this age, it’s not just about playtime. It’s how children build strength, balance, coordination, and the confidence to move through the world on their own.
+              We take physical development seriously because at this age, movement is how children build strength, balance, coordination, and confidence.
             </p>
             <p>
-              These early years matter. The more they move, the more secure, active, and confident they become, in their bodies and beyond.
+              It’s not an extra here — it’s part of everyday life. Whether they’re stretching, running, or trying something new, they’re constantly discovering what their bodies can do.
             </p>
-            
-            {/* Highlighted key phrase */}
-            <p className="text-lg md:text-xl font-bold font-display text-primary max-w-xl mx-auto py-2">
-              “So movement isn’t an add-on here. It’s part of their everyday.”
-            </p>
-
-            <p>
-              From yoga stretches to running on the field, from trying a gymnastics move to practicing taekwondo, they’re constantly exploring what their bodies can do. There are little stumbles, big smiles, and those quiet “I did it” moments.
-            </p>
-            <p>
-              And slowly, you see the shift – better balance, more energy, growing confidence.
-            </p>
-            
-            <p className="font-bold text-foreground/80">
-              To them, it’s just fun.
-            </p>
-            
             <p className="text-[#29BFDF] font-semibold pt-2 border-t border-foreground/5 max-w-lg mx-auto">
-              But as you explore further, you’ll see how each activity is thoughtfully designed to build your child’s strength, coordination, and overall physical potential from the very start.
+              To them, it feels like play. But as you explore further, you’ll see how each activity is thoughtfully designed to support their physical growth from the very start.
             </p>
           </div>
         </div>

@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
 import { JAPANESE_PILLARS } from "@/config/curriculum";
 import { motion } from "framer-motion";
+import React, { useEffect, useState } from "react";
 
 export default function PillarsNavigation(): React.JSX.Element {
   const [activeId, setActiveId] = useState<string>(JAPANESE_PILLARS[0]!.id);
@@ -50,19 +50,17 @@ export default function PillarsNavigation(): React.JSX.Element {
               <button
                 key={pillar.id}
                 onClick={() => scrollToSection(pillar.id)}
-                className={`relative shrink-0 px-4 py-2 rounded-full text-xs md:text-sm font-bold transition-all duration-300 flex items-center gap-2 border ${
-                  isActive
+                className={`relative shrink-0 px-4 py-2 rounded-full text-xs md:text-sm font-bold transition-all duration-300 flex items-center gap-2 border ${isActive
                     ? "bg-foreground text-white border-foreground shadow-sm"
                     : "bg-gray-50 text-foreground/70 border-gray-200 hover:bg-gray-100 hover:text-foreground"
-                }`}
+                  }`}
               >
-                <span className={`text-[11px] px-1.5 py-0.5 rounded-md font-mono ${
-                  isActive ? "bg-white/20 text-white" : pillar.badgeBg + " " + pillar.badgeText
-                }`}>
+                <span className={`text-[11px] px-1.5 py-0.5 rounded-md font-mono ${isActive ? "bg-white/20 text-white" : pillar.badgeBg + " " + pillar.badgeText
+                  }`}>
                   0{idx + 1}
                 </span>
                 <span>{pillar.romaji}</span>
-                <span className="opacity-75 hidden sm:inline-block">({pillar.kanji})</span>
+                {/* <span className="opacity-75 hidden sm:inline-block">({pillar.kanji})</span> */}
 
                 {isActive && (
                   <motion.div
